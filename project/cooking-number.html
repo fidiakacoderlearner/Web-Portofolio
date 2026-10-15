@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking Number - Afdhal Fidi Ansori</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="detail">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Afdhal<span>Fidi</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <article class="project-detail">
+        <div class="container">
+            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Semua Project</a>
+
+            <header class="project-detail-head">
+                <h1 class="project-title">Cooking Number</h1>
+                <p class="project-lead">
+                    Game edukasi matematika bertema restoran untuk siswa SMP.
+                </p>
+            </header>
+
+            <figure class="project-hero">
+                <button type="button" class="zoom-trigger" aria-label="Perbesar gambar Cooking Number">
+                    <img src="../assets/img/project3.jpg" alt="Tampilan Cooking Number"
+                        onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                </button>
+                <figcaption>Pratinjau antarmuka Cooking Number</figcaption>
+            </figure>
+
+            <div class="project-body">
+                <section class="project-section">
+                    <h2>Tentang Project</h2>
+                    <p>
+                        <strong>Cooking Number</strong> adalah game edukasi matematika di mana pelanggan memesan
+                        sebuah angka, lalu pemain menyusun angka-angka yang tersedia menggunakan operator matematika
+                        hingga cocok, kemudian menyajikannya.
+                    </p>
+                    <p>
+                        Game ini melatih <em>kaidah operasi hitung</em> dengan aritmetika pecahan eksak (tanpa
+                        floating point, misalnya <code>0.1 + 0.2</code> harus tepat <code>0.3</code>). Soal dibangun
+                        dengan pendekatan <em>backward generation</em> sehingga selalu dijamin memiliki solusi.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Fitur Utama</h2>
+                    <ul class="project-list">
+                        <li>Gameplay menyusun angka sesuai pesanan pelanggan</li>
+                        <li>Aritmetika pecahan eksak (bebas error floating point)</li>
+                        <li>Kaidah operasi: × dan ÷ mengikat lebih kuat dari + dan −</li>
+                        <li>Operator biner (+ − × ÷) dan unary (^ √)</li>
+                        <li>Generator soal backward generation + jaminan solvable</li>
+                        <li>Mode &amp; level beragam dengan UI multi-pelanggan</li>
+                        <li>Progres level tersimpan di Local Storage</li>
+                        <li>Musik &amp; efek suara menggunakan Web Audio API</li>
+                        <li>Kontrol drag &amp; drop plus tap-to-place (ramah HP)</li>
+                    </ul>
+                </section>
+
+                <section class="project-section">
+                    <h2>Teknologi</h2>
+                    <div class="project-tech">
+                        <span>JavaScript (ES Modules)</span><span>interact.js</span><span>Web Audio API</span><span>HTML &amp; CSS</span>
+                    </div>
+                </section>
+
+                <section class="project-section">
+                    <h2>Galeri</h2>
+                    <div class="project-gallery">
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 1">
+                            <img src="../assets/img/cooking/1.jpg" alt="Cooking Number - tangkapan layar 1"
+                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                        </button>
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 2">
+                            <img src="../assets/img/cooking/2.jpg" alt="Cooking Number - tangkapan layar 2"
+                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                        </button>
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 3">
+                            <img src="../assets/img/cooking/3.jpg" alt="Cooking Number - tangkapan layar 3"
+                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="project-cta">
+                <a href="https://github.com/fidiakacoderlearner/cooking_number" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Lihat Code</a>
+                <a href="https://cookingnumber.vercel.app" target="_blank" rel="noopener" class="btn secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
+        <img class="lightbox-img" src="" alt="" />
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

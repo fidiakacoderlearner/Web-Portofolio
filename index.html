@@ -1,152 +1,372 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Pidi</title>
-    <link rel="stylesheet" href="style.css"/>
-    <style>
-        .clickable-image {
-            position: relative;
-            display: inline-block;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .clickable-image img {
-            width: auto;
-            height: 50px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            display: block;
-        }
-        
-        .clickable-image:hover {
-            transform: translateY(-5px);
-        }
-        
-        .clickable-image:hover img {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .clickable-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .clickable-image:hover::after {
-            opacity: 1;
-        }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio - Afdhal Fidi Ansori</title>
 
-        .bounce-text {
-            display: inline-block;
-            position: relative;
-            color: #2876c4;
-            font-weight: 600;
-            animation: bounceDownUp 2s ease-in-out infinite;
-            transform-origin: center bottom;
-        }
-        
-        @keyframes bounceDownUp {
-            0%, 100% {
-                transform: translateY(0);
-                animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-            }
-            30% {
-                transform: translateY(10px);
-                animation-timing-function: cubic-bezier(0.5, 0, 0.75, 1);
-            }
-            60% {
-                transform: translateY(-5px);
-                animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-            }
-            80% {
-                transform: translateY(3px);
-                animation-timing-function: cubic-bezier(0.5, 0, 0.75, 1);
-            }
-        }
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-         /* Image Container */
-         .content-image {
-            flex: 0 0 300px;
-            text-align: center;
-        }
-        
-        .content-image img {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 5px solid white;
-            animation: slideInRight 1.2s ease-out forwards;
-        }
-        
-        @keyframes slideInRight {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Google Fonts: Playfair Display (display) + Plus Jakarta Sans (body) + JetBrains Mono (meta) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <!-- NAVIGATION BAR -->
-    <nav>
-        <a href ="#">
-            <div class="hero-image clickable-image">
-                <img src="logo3.png" alt="Affian">
-            </div></a>
-        <ul>
-            <li>
-                <a href="tugas.html">Tugas</a>
-            </li>
-            <li>
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul> 
-    </nav>
-    <!-- NAVIGATION BAR DONE-->
-    <!-- CONTENT -->
-    <div class="content">
-        <div class="content-text">
-            <h1 class="h1">Selamat Datang di Website Saya!!!</h1>
-            <p class="p1">Perkenalkan nama saya Afdhal Fidi Ansori</p> 
-            <p class="p2">Saya adalah seorang <span class="bounce-text">Mahasiswa</span></p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Afdhal<span>Fidi</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="content-image">
-            <img src="AFDHAL_FIDI_ANSORI-removebg-preview1.png" alt="foto fidi">
-        </div>  
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Hi, I'm <em>Afdhal Fidi Ansori</em></h1>
+                <p class="hero-role">Student &amp; <em>Developer</em></p>
+                <p>Focused on clean code, structured thinking, and practical solutions that stay simple and professional.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Get In Touch</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/fidiakacoderlearner" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/3.14di/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/afdhal-fidi-ansori" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="hero-img" data-aos="fade-left" data-aos-delay="100">
+                <img src="assets/img/profile.jpg" alt="Afdhal Fidi Ansori Profile Picture" />
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-head" data-aos="fade-up">
+                <h2 class="section-title">About <em>Me</em></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img" data-aos="fade-right">
+                    <img src="assets/img/about.jpg" alt="About Afdhal Fidi Ansori"
+                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Afdhal Fidi Ansori</h3>
+                    <p>
+                        Saya Afdhal Fidi Ansori, seorang mahasiswa yang tertarik pada pengembangan web, basis data,
+                        dan desain antarmuka. Saya senang mengubah ide menjadi karya nyata yang rapi, fungsional,
+                        dan mudah digunakan.
+                    </p>
+                    <p>
+                        Saat ini saya sedang senang mendalami perkembangan AI, mulai dari memahami cara kerjanya,
+                        memanfaatkannya untuk belajar lebih efektif, hingga mengeksplorasi cara memadukannya ke dalam
+                        project web.
+                    </p>
+                    <p>
+                        Saya percaya pada proses: berpikir terstruktur, terus belajar hal baru, dan terbuka pada
+                        kolaborasi. Komitmen saya adalah mengasah kemampuan teknis sekaligus soft skill agar hasilnya
+                        berkualitas dan bermanfaat.
+                    </p>
+                    <ul class="about-focus">
+                        <li>Web Development</li>
+                        <li>AI</li>
+                        <li>Database</li>
+                        <li>UI Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-head" data-aos="fade-up">
+                <h2 class="section-title">My <em>Skills</em></h2>
+            </div>
+
+            <div class="skills-group" data-aos="fade-up">
+                <h3 class="skills-group-title">Core & Programming</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><span>Java</span></div>
+                    <div class="skill-card"><span>C++</span></div>
+                    <div class="skill-card"><span>Python</span></div>
+                    <div class="skill-card"><span>JavaScript</span></div>
+                </div>
+            </div>
+
+            <div class="skills-group" data-aos="fade-up" data-aos-delay="50">
+                <h3 class="skills-group-title">Web Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><span>HTML</span></div>
+                    <div class="skill-card"><span>CSS</span></div>
+                    <div class="skill-card"><span>JavaScript</span></div>
+                    <div class="skill-card"><span>React</span></div>
+                </div>
+            </div>
+
+            <div class="skills-group" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="skills-group-title">Web Backend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><span>Laravel</span></div>
+                </div>
+            </div>
+
+            <div class="skills-group" data-aos="fade-up" data-aos-delay="150">
+                <h3 class="skills-group-title">Database</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><span>Oracle SQL</span></div>
+                    <div class="skill-card"><span>MySQL</span></div>
+                </div>
+            </div>
+
+            <div class="skills-group" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="skills-group-title">Design & CMS</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><span>Figma</span></div>
+                    <div class="skill-card"><span>Canva</span></div>
+                    <div class="skill-card"><span>WordPress</span></div>
+                </div>
+            </div>
+
+            <div class="skills-group" data-aos="fade-up" data-aos-delay="250">
+                <h3 class="skills-group-title">Soft Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><span>Kerja Sama & Kolaborasi</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-head" data-aos="fade-up">
+                <h2 class="section-title">My <em>Projects</em></h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card" data-aos="fade-up">
+                    <img src="assets/img/project1.jpg" alt="Cassava Village — LKPD Interaktif"
+                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
+                    <div class="project-content">
+                        <h3><a class="project-link" href="project/cassava-village.html">Cassava Village</a></h3>
+                        <p>Website LKPD interaktif bertema Desa Singkong untuk materi komposisi fungsi (Fase F). Dilengkapi alur cerita, eksplorasi, kuis interaktif, dan penyimpanan jawaban siswa agar dapat dipantau guru.</p>
+                        <div class="project-tech">
+                            <span>React 19</span><span>Vite</span><span>Tailwind</span><span>Express</span><span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fidiakacoderlearner/cassava-village" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://cassava-village.vercel.app" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/img/project2.jpg" alt="Mathbiz Riau — Simulasi Bisnis Edukasi"
+                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
+                    <div class="project-content">
+                        <h3><a class="project-link" href="project/mathbiz-riau.html">Mathbiz Riau</a></h3>
+                        <p>Permainan edukasi berbasis web yang menggabungkan matematika, kewirausahaan, dan budaya Melayu Riau. Pemain membangun usaha virtual mulai dari perencanaan bisnis, produksi, hingga penjualan sambil menyelesaikan tantangan matematika.</p>
+                        <div class="project-tech">
+                            <span>React 19</span><span>Vite</span><span>Tailwind</span><span>Context API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fidiakacoderlearner/great-riau-mathbiz" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://great-riau-mathbiz.vercel.app" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/img/project3.jpg" alt="Cooking Number — Game Edukasi Matematika"
+                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
+                    <div class="project-content">
+                        <h3><a class="project-link" href="project/cooking-number.html">Cooking Number</a></h3>
+                        <p>Game edukasi matematika untuk siswa SMP bertema restoran. Pelanggan memesan sebuah angka, lalu pemain menyusun angka-angka yang tersedia dengan operator matematika hingga cocok, kemudian menyajikannya.</p>
+                        <div class="project-tech">
+                            <span>Vanilla JS</span><span>interact.js</span><span>Web Audio API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fidiakacoderlearner/cooking_number" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://cookingnumber.vercel.app" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects-more" data-aos="fade-up">
+                <a href="projects.html" class="btn secondary">Lihat Selengkapnya <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certificates Section (Full-Page) -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-head" data-aos="fade-up">
+                <h2 class="section-title">Achievements &amp; <em>Certificates</em></h2>
+            </div>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="50">
+                Beberapa pencapaian lomba yang telah diraih untuk menunjukkan hasil belajar dan dedikasi.
+            </p>
+
+            <div class="achievements-grid">
+                <!-- Achievement 1 -->
+                <article class="achievement-card" data-aos="fade-up">
+                    <div class="achievement-header">
+                        <div class="achievement-badge finalis">Finalis</div>
+                        <h3 class="achievement-title">LIDM – Finalis Universitas Riau 2026</h3>
+                    </div>
+                    <div class="achievement-body">
+                        <div class="achievement-meta">
+                            <span><i class="fas fa-building"></i> Universitas Riau</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
+                        </div>
+                        <p class="achievement-desc">
+                            Finalis dalam ajang Lomba Inovasi Digital Mahasiswa (LIDM) Universitas Riau Tahun 2026.
+                        </p>
+                    </div>
+                    <div class="achievement-media">
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar sertifikat LIDM">
+                            <img src="assets/img/cert-lidm.jpg" alt="Sertifikat LIDM Finalis Universitas Riau"
+                                onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Achievement 2 -->
+                <article class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-header">
+                        <div class="achievement-badge juara3">Juara 3</div>
+                        <h3 class="achievement-title">LKTI – Inovasi Karya Online Nasional (IKON)</h3>
+                    </div>
+                    <div class="achievement-body">
+                        <div class="achievement-meta">
+                            <span><i class="fas fa-building"></i> BEM FKIP Universitas Mataram</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
+                        </div>
+                        <p class="achievement-desc">
+                            Tema: <em>“Inovasi Generasi Muda dalam Mewujudkan Indonesia Emas 2045 melalui Ilmu Pengetahuan dan Teknologi”</em>.
+                        </p>
+                    </div>
+                    <div class="achievement-media">
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar sertifikat LKTI IKON">
+                            <img src="assets/img/cert-lkti.jpg" alt="Sertifikat LKTI IKON Juara 3"
+                                onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Achievement 3 -->
+                <article class="achievement-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="achievement-header">
+                        <div class="achievement-badge juara1">Juara 1</div>
+                        <h3 class="achievement-title">Lomba Media Pembelajaran – Semarak Teknologi Pendidikan 2026</h3>
+                    </div>
+                    <div class="achievement-body">
+                        <div class="achievement-meta">
+                            <span><i class="fas fa-building"></i> Semarak Teknologi Pendidikan</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
+                        </div>
+                        <p class="achievement-desc">
+                            Tema: <em>“Transformasi Pembelajaran Digital”</em>.
+                        </p>
+                    </div>
+                    <div class="achievement-media">
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar sertifikat Media Pembelajaran">
+                            <img src="assets/img/cert-media.jpg" alt="Sertifikat Juara 1 Lomba Media Pembelajaran"
+                                onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects-more" data-aos="fade-up">
+                <a href="certificates.html" class="btn secondary">Lihat Selengkapnya <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-head" data-aos="fade-up">
+                <h2 class="section-title">Contact <em>Me</em></h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Get In Touch</h3>
+                    <p>Feel free to reach out for collaboration, discussion, or just a friendly hello!</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:afdhalfidi.ansori015@gmail.com">afdhalfidi.ansori015@gmail.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Indonesia</span>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/fidiakacoderlearner" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/3.14di/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/afdhal-fidi-ansori" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back To Top -->
+    <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Lightbox (zoom gambar) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
+        <img class="lightbox-img" src="" alt="" />
     </div>
-    <!-- CONTENT DONE-->
-    <!-- FOOTER -->
-     <div class="footer">
-        Copyright &copy; 2025 By Afdhal Fidi Ansori
-     </div>
-     <script>
-        // Untuk memastikan animasi berjalan saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedText = document.querySelector('.animated-text');
-            
-            // Reset animasi untuk memicu kembali
-            setTimeout(() => {
-                animatedText.style.animation = 'none';
-                void animatedText.offsetWidth; // Trigger reflow
-                animatedText.style.animation = null;
-            }, 100);
-        });
-    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

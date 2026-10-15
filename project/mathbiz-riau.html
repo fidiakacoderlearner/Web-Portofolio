@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathbiz Riau - Afdhal Fidi Ansori</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="detail">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Afdhal<span>Fidi</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <article class="project-detail">
+        <div class="container">
+            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Semua Project</a>
+
+            <header class="project-detail-head">
+                <h1 class="project-title">Mathbiz Riau</h1>
+                <p class="project-lead">
+                    Permainan edukasi berbasis web yang menggabungkan matematika, kewirausahaan, dan budaya Melayu Riau.
+                </p>
+            </header>
+
+            <figure class="project-hero">
+                <button type="button" class="zoom-trigger" aria-label="Perbesar gambar Mathbiz Riau">
+                    <img src="../assets/img/project2.jpg" alt="Tampilan Mathbiz Riau"
+                        onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                </button>
+                <figcaption>Pratinjau antarmuka Mathbiz Riau</figcaption>
+            </figure>
+
+            <div class="project-body">
+                <section class="project-section">
+                    <h2>Tentang Project</h2>
+                    <p>
+                        <strong>Mathbiz Riau</strong> adalah permainan edukasi berbasis web (Single Page Application)
+                        di mana pemain membangun usaha virtual — mulai dari perencanaan bisnis, produksi, hingga
+                        penjualan — sambil menyelesaikan tantangan matematika yang terintegrasi ke dalam mekanisme
+                        permainan.
+                    </p>
+                    <p>
+                        Seluruh data permainan (XP, budget, riwayat, progres produk, status karyawan) disimpan secara
+                        lokal menggunakan React Context API dan Local Storage, sehingga arsitektur tetap ringan dan
+                        tidak memerlukan autentikasi maupun konfigurasi server.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Fitur Utama</h2>
+                    <ul class="project-list">
+                        <li>Simulasi bisnis interaktif berbasis cerita</li>
+                        <li>Sistem XP dan progres pemain</li>
+                        <li>Manajemen budget dan sumber daya</li>
+                        <li>Sistem perekrutan karyawan dengan inflasi biaya</li>
+                        <li>Solver program linear untuk optimasi keuntungan</li>
+                        <li>Generasi soal pertidaksamaan secara dinamis</li>
+                        <li>Visualisasi grafik menggunakan SVG native</li>
+                        <li>Penyimpanan progres otomatis via Local Storage</li>
+                        <li>Desain antarmuka bernuansa budaya Melayu Riau</li>
+                    </ul>
+                </section>
+
+                <section class="project-section">
+                    <h2>Komponen Edukasi</h2>
+                    <ul class="project-list">
+                        <li>Sistem pertidaksamaan linear</li>
+                        <li>Program linear</li>
+                        <li>Analisis titik optimum</li>
+                        <li>Perhitungan biaya produksi &amp; keuntungan</li>
+                        <li>Pengelolaan sumber daya usaha</li>
+                    </ul>
+                </section>
+
+                <section class="project-section">
+                    <h2>Teknologi</h2>
+                    <div class="project-tech">
+                        <span>React 19</span><span>Vite</span><span>React Router DOM v6</span><span>Tailwind CSS 4</span><span>Context API</span><span>Local Storage</span>
+                    </div>
+                </section>
+
+                <section class="project-section">
+                    <h2>Galeri</h2>
+                    <div class="project-gallery">
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 1">
+                            <img src="../assets/img/mathbiz/1.jpg" alt="Mathbiz Riau - tangkapan layar 1"
+                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                        </button>
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 2">
+                            <img src="../assets/img/mathbiz/2.jpg" alt="Mathbiz Riau - tangkapan layar 2"
+                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                        </button>
+                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 3">
+                            <img src="../assets/img/mathbiz/3.jpg" alt="Mathbiz Riau - tangkapan layar 3"
+                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="project-cta">
+                <a href="https://github.com/fidiakacoderlearner/great-riau-mathbiz" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Lihat Code</a>
+                <a href="https://great-riau-mathbiz.vercel.app" target="_blank" rel="noopener" class="btn secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
+        <img class="lightbox-img" src="" alt="" />
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

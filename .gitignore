@@ -1,0 +1,11 @@
+# Windows / macOS file sistem
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Backup gambar asli
+*.tmp.jpg
