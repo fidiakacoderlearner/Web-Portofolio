@@ -9,3 +9,6 @@ Thumbs.db
 
 # Backup gambar asli
 *.tmp.jpg
+
+# Catatan rencana lokal (jangan di-push)
+PLAN.md
