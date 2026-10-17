@@ -908,15 +908,14 @@ section {
     font-size: 1.7rem;
     line-height: 1;
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    border-radius: 999px;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    /* Karakter "×" duduk ~0.15em di bawah titik tengah kotak (metrik baseline
+       font Plus Jakarta Sans), jadi digeser naik lewat padding bawah agar
+       posisinya benar-benar di tengah. Ukuran kotak tetap 44x44 px. */
+    padding-bottom: 0.3em;
     cursor: pointer;
-    transition: var(--transition);
-}
-
-.lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.24);
 }
 
 body.no-scroll {
