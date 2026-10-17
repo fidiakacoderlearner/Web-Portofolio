@@ -38,6 +38,10 @@
     scroll-padding-top: 80px;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-body);
     background: var(--bg-primary);
@@ -226,7 +230,7 @@ section {
 
 .hero .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     align-items: center;
     gap: clamp(2rem, 6vw, 4.5rem);
 }
@@ -349,7 +353,7 @@ section {
 /* ===== About ===== */
 .about-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     align-items: center;
     gap: clamp(2rem, 6vw, 4rem);
 }
@@ -432,7 +436,7 @@ section {
 /* ===== Projects ===== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     gap: clamp(1.4rem, 4vw, 1.9rem);
 }
 
@@ -561,7 +565,7 @@ section {
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     gap: clamp(1.25rem, 3.8vw, 1.7rem);
 }
 
@@ -701,7 +705,7 @@ section {
 /* ===== Contact ===== */
 .contact-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     gap: clamp(2rem, 6vw, 4rem);
     align-items: start;
 }
@@ -1169,5 +1173,19 @@ body.no-scroll {
     .social-icons a,
     .back-to-top {
         transition: none;
+    }
+}
+
+/* ===== Animasi AOS di layar sempit =====
+   fade-left / fade-right menggeser elemen 100px ke kanan/kiri saat belum
+   tampil. Di mobile container hanya menyisakan ~4vw margin, sehingga elemen
+   keluar layar, viewport melebar, dan navbar (position: fixed) ikut melebar
+   sampai tombol burger tidak terlihat. Di layar sempit arahkan animasinya
+   ke vertikal saja. Saat animasi aktif, .aos-animate (specificity lebih
+   tinggi) tetap menang, jadi animasinya tetap normal. */
+@media (max-width: 992px) {
+    [data-aos="fade-left"],
+    [data-aos="fade-right"] {
+        transform: translate3d(0, 60px, 0);
     }
 }
