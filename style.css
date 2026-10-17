@@ -1195,13 +1195,3 @@ body.no-scroll {
     }
 }
 
-/* ===== Grid sertifikat dengan 4 kartu =====
-   Tanpa aturan ini, di desktop lebar (>=1103px) auto-fit memasang 3 kolom
-   sehingga kartu ke-4 jatuh sendirian di baris kedua. Dikunci jadi 2 kolom
-   supaya 4 kartu tersusun rapi 2 x 2. Di bawah 1024px, auto-fit sudah
-   otomatis memberi 2 kolom (tablet) dan 1 kolom (mobile). */
-@media (min-width: 1024px) {
-    .achievements-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}

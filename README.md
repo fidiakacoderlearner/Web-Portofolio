@@ -191,8 +191,12 @@ rasio file gambar dengan tabel di bawah:
 ## Menambah Sertifikat Baru
 
 1. Simpan gambar sertifikatnya di `assets/img/`.
-2. Tambahkan kartu baru di `index.html` **dan** `certificates.html` (copy blok `<article class="achievement-card">`).
-3. Ubah `src` gambar, judul, badge, dan keterangannya.
+2. Tambahkan kartu baru di **`certificates.html`** — copy blok `<article class="achievement-card">` dan
+   taruh **paling akhir**. Grid-nya 3 kolom, jadi sertifikat baru otomatis duduk di baris berikutnya.
+3. Ubah `src` gambar, judul, badge, dan keterangannya. Badge yang sudah ada di `style.css`:
+   `finalis`, `juara1`, `juara3`, `harapan1`.
+4. **Homepage sengaja hanya 3 kartu** (section Achievements). Kalau sertifikat barunya mau tampil di
+   homepage juga, **ganti** salah satu dari 3 kartu yang ada — jangan ditambah jadi 4.
 
 ## Kustomisasi Cepat
 
