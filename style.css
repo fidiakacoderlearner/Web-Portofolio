@@ -622,6 +622,12 @@ section {
     background: rgba(244, 63, 94, 0.07);
 }
 
+.achievement-badge.harapan1 {
+    color: #047857;
+    border-color: rgba(4, 120, 87, 0.3);
+    background: rgba(16, 185, 129, 0.08);
+}
+
 .achievement-badge.finalis {
     color: var(--primary);
     border-color: rgba(30, 58, 138, 0.3);
@@ -1186,5 +1192,16 @@ body.no-scroll {
     [data-aos="fade-left"],
     [data-aos="fade-right"] {
         transform: translate3d(0, 60px, 0);
+    }
+}
+
+/* ===== Grid sertifikat dengan 4 kartu =====
+   Tanpa aturan ini, di desktop lebar (>=1103px) auto-fit memasang 3 kolom
+   sehingga kartu ke-4 jatuh sendirian di baris kedua. Dikunci jadi 2 kolom
+   supaya 4 kartu tersusun rapi 2 x 2. Di bawah 1024px, auto-fit sudah
+   otomatis memberi 2 kolom (tablet) dan 1 kolom (mobile). */
+@media (min-width: 1024px) {
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

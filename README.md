@@ -37,6 +37,7 @@ Web-Portofolio/
         ├── cert-lidm.jpg   # Sertifikat LIDM
         ├── cert-lkti.jpg   # Sertifikat LKTI IKON
         ├── cert-media.jpg  # Sertifikat Media Pembelajaran
+        ├── cert-esai.jpg   # Sertifikat Olimpiade Pendidikan Ekonomi CAKRAWALA (Harapan 1 Esai)
         ├── placeholder.svg # Fallback otomatis kalau gambar belum ada
         ├── cassava/        # Galeri Cassava Village (1.jpg, 2.jpg, 3.jpg)
         ├── mathbiz/        # Galeri Mathbiz Riau (1.jpg, 2.jpg, 3.jpg)
@@ -96,6 +97,7 @@ muncul ikon rusak. Cukup simpan file dengan **nama persis** seperti tabel di baw
 | `assets/img/cert-lidm.jpg` | Sertifikat LIDM | ±260 KB |
 | `assets/img/cert-lkti.jpg` | Sertifikat LKTI IKON | ±210 KB |
 | `assets/img/cert-media.jpg` | Sertifikat Media Pembelajaran | ±230 KB |
+| `assets/img/cert-esai.jpg` | Sertifikat Olimpiade Pendidikan Ekonomi CAKRAWALA (Harapan 1 Esai) | ±320 KB |
 | `assets/img/cassava/1–3.jpg` | Galeri Cassava Village | ±160–210 KB |
 | `assets/img/mathbiz/1–3.jpg` | Galeri Mathbiz Riau | ±80–90 KB |
 | `assets/img/cooking/1–3.jpg` | Galeri Cooking Number | ±50–80 KB |
@@ -104,7 +106,7 @@ muncul ikon rusak. Cukup simpan file dengan **nama persis** seperti tabel di baw
 | `assets/img/watchwatch/1–3.jpg` | Galeri WatchWatch | ⚠️ **isi sendiri** |
 
 > **Catatan ukuran:** semua gambar sudah dioptimalkan (maks lebar **1600 px**, JPEG kualitas ±82).
-> Total folder `assets/img` ± **2,2 MB** (belum termasuk gambar baru yang kamu tambahkan).
+> Total folder `assets/img` ± **2,7 MB**.
 
 ### Catatan Penting
 
