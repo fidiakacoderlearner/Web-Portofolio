@@ -40,7 +40,10 @@ Web-Portofolio/
         ├── placeholder.svg # Fallback otomatis kalau gambar belum ada
         ├── cassava/        # Galeri Cassava Village (1.jpg, 2.jpg, 3.jpg)
         ├── mathbiz/        # Galeri Mathbiz Riau (1.jpg, 2.jpg, 3.jpg)
-        └── cooking/        # Galeri Cooking Number (1.jpg, 2.jpg, 3.jpg)
+        ├── cooking/        # Galeri Cooking Number (1.jpg, 2.jpg, 3.jpg)
+        ├── smartqueue/     # Galeri SmartQueue (isi sendiri)
+        ├── taro-quest/     # Galeri Taro Quest (isi sendiri)
+        └── watchwatch/     # Galeri WatchWatch (isi sendiri)
 ```
 
 ## Cara Menjalankan
@@ -75,10 +78,10 @@ index.html
 
 ## Daftar Gambar
 
-Semua gambar hampir **sudah terisi** — hanya `project4.jpg` (SmartQueue) yang belum ada
-(sementara otomatis tampil **placeholder**). Kalau ada yang belum ada, otomatis tampil **placeholder**
-(`assets/img/placeholder.svg`) — jadi tidak akan muncul ikon rusak. Cukup simpan file dengan
-**nama persis** seperti tabel di bawah.
+Semua gambar sudah terisi, **kecuali gambar untuk 3 project baru** (`project4.jpg`, `project5.jpg`,
+`project6.jpg` dan galeri `smartqueue/`, `taro-quest/`, `watchwatch/`) — itu diisi sendiri oleh pemilik.
+Selama file belum ada, otomatis tampil **placeholder** (`assets/img/placeholder.svg`) — jadi tidak akan
+muncul ikon rusak. Cukup simpan file dengan **nama persis** seperti tabel di bawah.
 
 | File | Bagian | Ukuran file |
 |---|---|---|
@@ -87,18 +90,21 @@ Semua gambar hampir **sudah terisi** — hanya `project4.jpg` (SmartQueue) yang 
 | `assets/img/project1.jpg` | Thumbnail Cassava Village | ±170 KB |
 | `assets/img/project2.jpg` | Thumbnail Mathbiz Riau | ±50 KB |
 | `assets/img/project3.jpg` | Thumbnail Cooking Number | ±40 KB |
-| `assets/img/project4.jpg` | Thumbnail SmartQueue | ⚠️ belum ada |
-| `assets/img/project5.jpg` | Thumbnail Taro Quest | ±120 KB |
-| `assets/img/project6.jpg` | Thumbnail WatchWatch | ±50 KB |
+| `assets/img/project4.jpg` | Thumbnail SmartQueue | ⚠️ **isi sendiri** |
+| `assets/img/project5.jpg` | Thumbnail Taro Quest | ⚠️ **isi sendiri** (ada gambar sementara) |
+| `assets/img/project6.jpg` | Thumbnail WatchWatch | ⚠️ **isi sendiri** (ada gambar sementara) |
 | `assets/img/cert-lidm.jpg` | Sertifikat LIDM | ±260 KB |
 | `assets/img/cert-lkti.jpg` | Sertifikat LKTI IKON | ±210 KB |
 | `assets/img/cert-media.jpg` | Sertifikat Media Pembelajaran | ±230 KB |
 | `assets/img/cassava/1–3.jpg` | Galeri Cassava Village | ±160–210 KB |
 | `assets/img/mathbiz/1–3.jpg` | Galeri Mathbiz Riau | ±80–90 KB |
 | `assets/img/cooking/1–3.jpg` | Galeri Cooking Number | ±50–80 KB |
+| `assets/img/smartqueue/1–3.jpg` | Galeri SmartQueue | ⚠️ **isi sendiri** |
+| `assets/img/taro-quest/1–3.jpg` | Galeri Taro Quest | ⚠️ **isi sendiri** |
+| `assets/img/watchwatch/1–3.jpg` | Galeri WatchWatch | ⚠️ **isi sendiri** |
 
 > **Catatan ukuran:** semua gambar sudah dioptimalkan (maks lebar **1600 px**, JPEG kualitas ±82).
-> Total folder `assets/img` ± **2,2 MB**.
+> Total folder `assets/img` ± **2,2 MB** (belum termasuk gambar baru yang kamu tambahkan).
 
 ### Catatan Penting
 
@@ -137,7 +143,7 @@ rasio file gambar dengan tabel di bawah:
 ### Cara Menaruh Gambar
 
 1. Siapkan filenya, rename sesuai nama di tabel (contoh: `about.jpg`).
-2. Pindahkan ke folder yang sesuai (`assets/img/` atau subfolder `cassava/`, `mathbiz/`, `cooking/`).
+2. Pindahkan ke folder yang sesuai (`assets/img/` atau subfolder `cassava/`, `mathbiz/`, `cooking/`, `smartqueue/`, `taro-quest/`, `watchwatch/`).
 3. Refresh browser.
 
 ---

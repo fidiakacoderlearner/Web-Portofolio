@@ -921,7 +921,7 @@ body.no-scroll {
 
 /* ===== Projects listing page header ===== */
 .page-hero {
-    padding: clamp(120px, 16vw, 172px) 0 clamp(40px, 6vw, 64px);
+    padding: clamp(96px, 9vw, 104px) 0 clamp(40px, 6vw, 64px);
     text-align: center;
     background: var(--bg-primary);
 }
@@ -948,7 +948,7 @@ body.no-scroll {
 
 /* ===== Project detail page ===== */
 .project-detail {
-    padding: clamp(120px, 16vw, 172px) 0 clamp(80px, 8vw, 112px);
+    padding: clamp(96px, 9vw, 104px) 0 clamp(80px, 8vw, 112px);
     background: var(--bg-primary);
 }
 
@@ -1153,7 +1153,7 @@ body.no-scroll {
 
     .page-hero,
     .project-detail {
-        padding-top: clamp(104px, 18vw, 128px);
+        padding-top: clamp(88px, 13vw, 104px);
     }
 }
 
