@@ -127,7 +127,7 @@ rasio file gambar dengan tabel di bawah:
 | Thumbnail project (kartu) | 16 : 9 (`cover`) | 1600 × 900 px |
 | Hero halaman detail project | 16 : 9 (`cover`) | 1600 × 900 px |
 | Galeri halaman detail project | 4 : 3 (`cover`) | 1200 × 900 px |
-| Thumbnail sertifikat (kartu) | 16 : 10 (`cover`) | 1600 × 1000 px |
+| Thumbnail sertifikat (kartu) | 16 : 10 (`cover`) | 1600 × 1131 px |
 | Foto profil (hero) | potret (4:5) | 1000 × 1250 px |
 | Foto About | potret (4:5) | 800 × 1000 px |
 
