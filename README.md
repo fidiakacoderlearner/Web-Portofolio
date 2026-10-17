@@ -21,7 +21,7 @@ Web-Portofolio/
 │   ├── cassava-village.html
 │   ├── mathbiz-riau.html
 │   ├── cooking-number.html
-│   ├── smartqueue.html
+│   ├── smartqueue.html    # halaman detail disimpan, kartunya belum tampil
 │   ├── taro-quest.html
 │   └── watchwatch.html
 └── assets/
@@ -31,7 +31,7 @@ Web-Portofolio/
         ├── project1.jpg    # Thumbnail Cassava Village
         ├── project2.jpg    # Thumbnail Mathbiz Riau
         ├── project3.jpg    # Thumbnail Cooking Number
-        ├── project4.jpg    # Thumbnail SmartQueue
+        ├── project4.jpg    # Thumbnail SmartQueue (belum dipakai)
         ├── project5.jpg    # Thumbnail Taro Quest
         ├── project6.jpg    # Thumbnail WatchWatch
         ├── cert-lidm.jpg   # Sertifikat LIDM
@@ -42,7 +42,7 @@ Web-Portofolio/
         ├── cassava/        # Galeri Cassava Village (1.jpg, 2.jpg, 3.jpg)
         ├── mathbiz/        # Galeri Mathbiz Riau (1.jpg, 2.jpg, 3.jpg)
         ├── cooking/        # Galeri Cooking Number (1.jpg, 2.jpg, 3.jpg)
-        ├── smartqueue/     # Galeri SmartQueue (isi sendiri)
+        ├── smartqueue/     # Galeri SmartQueue (isi sendiri, belum dipakai)
         ├── taro-quest/     # Galeri Taro Quest (isi sendiri)
         └── watchwatch/     # Galeri WatchWatch (isi sendiri)
 ```
@@ -79,8 +79,10 @@ index.html
 
 ## Daftar Gambar
 
-Semua gambar sudah terisi, **kecuali gambar untuk 3 project baru** (`project4.jpg`, `project5.jpg`,
-`project6.jpg` dan galeri `smartqueue/`, `taro-quest/`, `watchwatch/`) — itu diisi sendiri oleh pemilik.
+Semua gambar sudah terisi, **kecuali gambar untuk 2 project baru yang tampil** (`project5.jpg`,
+`project6.jpg` dan galeri `taro-quest/`, `watchwatch/`) — itu diisi sendiri oleh pemilik.
+`project4.jpg` dan galeri `smartqueue/` juga belum ada, tapi keduanya **belum dipakai** karena kartu
+SmartQueue ditarik sementara dari `projects.html` (halaman detailnya tetap ada).
 Selama file belum ada, otomatis tampil **placeholder** (`assets/img/placeholder.svg`) — jadi tidak akan
 muncul ikon rusak. Cukup simpan file dengan **nama persis** seperti tabel di bawah.
 
@@ -91,7 +93,7 @@ muncul ikon rusak. Cukup simpan file dengan **nama persis** seperti tabel di baw
 | `assets/img/project1.jpg` | Thumbnail Cassava Village | ±170 KB |
 | `assets/img/project2.jpg` | Thumbnail Mathbiz Riau | ±50 KB |
 | `assets/img/project3.jpg` | Thumbnail Cooking Number | ±40 KB |
-| `assets/img/project4.jpg` | Thumbnail SmartQueue | ⚠️ **isi sendiri** |
+| `assets/img/project4.jpg` | Thumbnail SmartQueue | ⚠️ **belum dipakai** (kartunya belum tampil) |
 | `assets/img/project5.jpg` | Thumbnail Taro Quest | ⚠️ **isi sendiri** (ada gambar sementara) |
 | `assets/img/project6.jpg` | Thumbnail WatchWatch | ⚠️ **isi sendiri** (ada gambar sementara) |
 | `assets/img/cert-lidm.jpg` | Sertifikat LIDM | ±260 KB |
@@ -171,6 +173,10 @@ rasio file gambar dengan tabel di bawah:
 | **SmartQueue** | Aplikasi desktop JavaFX untuk sistem antrian asistensi real-time | [GitHub](https://github.com/fidiakacoderlearner/smartqueue) | — |
 | **Taro Quest** | LKPD interaktif materi komposisi fungsi (2 bahasa) | [GitHub](https://github.com/fidiakacoderlearner/taro-quest) | [Demo](https://taro-quest.vercel.app) |
 | **WatchWatch** | Portal review jam tangan berbasis WordPress | — | [Demo](https://watchwatch.biz.id/) |
+
+> **SmartQueue** masih didata di sini, tapi kartunya **belum ditampilkan** di `projects.html`
+> (ditarik sementara). Halaman detailnya (`project/smartqueue.html`) tetap ada — untuk
+> menampilkannya lagi cukup menambahkan kembali satu kartu di `projects.html`.
 
 ## Kontak
 
