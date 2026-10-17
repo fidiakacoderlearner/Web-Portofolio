@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taro Quest - Afdhal Fidi Ansori</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="detail">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Afdhal<span>Fidi</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <article class="project-detail">
+        <div class="container">
+            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Semua Project</a>
+
+            <header class="project-detail-head">
+                <h1 class="project-title">Taro Quest</h1>
+                <p class="project-lead">
+                    Website LKPD interaktif bertema Desa Talas untuk materi komposisi fungsi, dengan antarmuka dua bahasa.
+                </p>
+            </header>
+
+            <figure class="project-hero">
+                <button type="button" class="zoom-trigger" aria-label="Perbesar gambar Taro Quest">
+                    <img src="../assets/img/project5.jpg" alt="Tampilan Taro Quest"
+                        onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                </button>
+                <figcaption>Pratinjau antarmuka Taro Quest</figcaption>
+            </figure>
+
+            <div class="project-body">
+                <section class="project-section">
+                    <h2>Tentang Project</h2>
+                    <p>
+                        <strong>Taro Quest</strong> adalah Lembar Kerja Peserta Didik (LKPD) interaktif yang mengajak
+                        siswa mempelajari <em>komposisi fungsi</em> melalui kisah petualangan di Desa Talas bersama
+                        Bu Aza dan Bu Zia. Materi disampaikan lewat alur cerita, eksplorasi terbimbing, eksperimen
+                        <em>drag &amp; drop</em>, hingga kuis evaluasi.
+                    </p>
+                    <p>
+                        Jawaban siswa tersimpan di server sehingga <strong>guru dapat memantau perkembangan belajar</strong>
+                        tiap siswa dan mengelola kelas melalui dashboard. Aplikasi ini berskala internasional:
+                        antarmukanya tersedia dalam dua bahasa (Inggris &amp; Indonesia) sehingga tidak terikat pada
+                        kurikulum nasional tertentu.
+                    </p>
+                    <p>
+                        Aplikasi dibagi menjadi dua bagian: <strong>client</strong> (React 19 + Vite) untuk tampilan
+                        siswa &amp; guru, dan <strong>server</strong> (Express + PostgreSQL) sebagai API dan penyimpanan
+                        data. Dikembangkan oleh tim <strong>teaMate</strong> — Alya Diandra Febry Dalimunthe &amp;
+                        Afdhal Fidi Ansori (Universitas Riau).
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Fitur Utama</h2>
+                    <ul class="project-list">
+                        <li>Alur cerita interaktif di Desa Talas bersama Bu Aza &amp; Bu Zia</li>
+                        <li>Eksplorasi materi komposisi fungsi (24 langkah)</li>
+                        <li>Eksperimen drag &amp; drop dan kuis evaluasi interaktif</li>
+                        <li>Penyimpanan jawaban siswa secara otomatis</li>
+                        <li>Dashboard guru untuk memantau progres siswa</li>
+                        <li>Manajemen kelas dengan kode kelas (buat, gabung, keluarkan siswa)</li>
+                        <li>Autentikasi JWT dan role guru / siswa</li>
+                        <li>Antarmuka dua bahasa (Inggris &amp; Indonesia)</li>
+                        <li>Pengujian E2E dengan Playwright</li>
+                    </ul>
+                </section>
+
+                <section class="project-section">
+                    <h2>Teknologi</h2>
+                    <div class="project-tech">
+                        <span>React 19</span><span>Vite 7</span><span>Tailwind CSS 4</span><span>Express</span><span>PostgreSQL</span><span>JWT</span><span>Vercel</span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="project-cta">
+                <a href="https://github.com/fidiakacoderlearner/taro-quest" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Lihat Code</a>
+                <a href="https://taro-quest.vercel.app" target="_blank" rel="noopener" class="btn secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
+        <img class="lightbox-img" src="" alt="" />
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

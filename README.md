@@ -20,7 +20,10 @@ Web-Portofolio/
 ├── project/                # Halaman detail tiap project
 │   ├── cassava-village.html
 │   ├── mathbiz-riau.html
-│   └── cooking-number.html
+│   ├── cooking-number.html
+│   ├── smartqueue.html
+│   ├── taro-quest.html
+│   └── watchwatch.html
 └── assets/
     └── img/
         ├── profile.jpg     # Foto profil (hero)
@@ -28,6 +31,9 @@ Web-Portofolio/
         ├── project1.jpg    # Thumbnail Cassava Village
         ├── project2.jpg    # Thumbnail Mathbiz Riau
         ├── project3.jpg    # Thumbnail Cooking Number
+        ├── project4.jpg    # Thumbnail SmartQueue
+        ├── project5.jpg    # Thumbnail Taro Quest
+        ├── project6.jpg    # Thumbnail WatchWatch
         ├── cert-lidm.jpg   # Sertifikat LIDM
         ├── cert-lkti.jpg   # Sertifikat LKTI IKON
         ├── cert-media.jpg  # Sertifikat Media Pembelajaran
@@ -69,7 +75,8 @@ index.html
 
 ## Daftar Gambar
 
-Semua gambar **sudah terisi**. Kalau ada yang belum ada, otomatis tampil **placeholder**
+Semua gambar hampir **sudah terisi** — hanya `project4.jpg` (SmartQueue) yang belum ada
+(sementara otomatis tampil **placeholder**). Kalau ada yang belum ada, otomatis tampil **placeholder**
 (`assets/img/placeholder.svg`) — jadi tidak akan muncul ikon rusak. Cukup simpan file dengan
 **nama persis** seperti tabel di bawah.
 
@@ -80,6 +87,9 @@ Semua gambar **sudah terisi**. Kalau ada yang belum ada, otomatis tampil **place
 | `assets/img/project1.jpg` | Thumbnail Cassava Village | ±170 KB |
 | `assets/img/project2.jpg` | Thumbnail Mathbiz Riau | ±50 KB |
 | `assets/img/project3.jpg` | Thumbnail Cooking Number | ±40 KB |
+| `assets/img/project4.jpg` | Thumbnail SmartQueue | ⚠️ belum ada |
+| `assets/img/project5.jpg` | Thumbnail Taro Quest | ±120 KB |
+| `assets/img/project6.jpg` | Thumbnail WatchWatch | ±50 KB |
 | `assets/img/cert-lidm.jpg` | Sertifikat LIDM | ±260 KB |
 | `assets/img/cert-lkti.jpg` | Sertifikat LKTI IKON | ±210 KB |
 | `assets/img/cert-media.jpg` | Sertifikat Media Pembelajaran | ±230 KB |
@@ -139,7 +149,7 @@ rasio file gambar dengan tabel di bawah:
 | Hero | Nama, foto profil, tombol, sosial media |
 | About | Perkenalan diri |
 | Skills | Daftar kemampuan (Core, Frontend, Backend, Database, Design & CMS, Soft Skills) |
-| Projects | 3 kartu project + tombol "Lihat Selengkapnya" |
+| Projects | **3 project unggulan** + tombol "Lihat Selengkapnya" → `projects.html` (semua project) |
 | Achievements | Prestasi lomba + sertifikat (klik kartu = preview besar) + tombol "Lihat Selengkapnya" |
 | Contact | Kontak & form |
 
@@ -150,6 +160,9 @@ rasio file gambar dengan tabel di bawah:
 | **Cassava Village** | LKPD interaktif materi komposisi fungsi | [GitHub](https://github.com/fidiakacoderlearner/cassava-village) | [Demo](https://cassava-village.vercel.app) |
 | **Mathbiz Riau** | Simulasi bisnis edukasi (matematika + kewirausahaan) | [GitHub](https://github.com/fidiakacoderlearner/great-riau-mathbiz) | [Demo](https://great-riau-mathbiz.vercel.app) |
 | **Cooking Number** | Game edukasi matematika untuk siswa SMP | [GitHub](https://github.com/fidiakacoderlearner/cooking_number) | [Demo](https://cookingnumber.vercel.app) |
+| **SmartQueue** | Aplikasi desktop JavaFX untuk sistem antrian asistensi real-time | [GitHub](https://github.com/fidiakacoderlearner/smartqueue) | — |
+| **Taro Quest** | LKPD interaktif materi komposisi fungsi (2 bahasa) | [GitHub](https://github.com/fidiakacoderlearner/taro-quest) | [Demo](https://taro-quest.vercel.app) |
+| **WatchWatch** | Portal review jam tangan berbasis WordPress | — | [Demo](https://watchwatch.biz.id/) |
 
 ## Kontak
 
@@ -163,8 +176,8 @@ rasio file gambar dengan tabel di bawah:
 ## Menambah Project Baru
 
 1. Buat file baru di `project/`, mis. `project/nama-baru.html` (copy salah satu halaman yang ada, lalu ubah isinya).
-2. Tambahkan kartu baru di `index.html` **dan** `projects.html` (copy blok `<article class="project-card">`).
-3. Arahkan `href` kartu ke `project/nama-baru.html`.
+2. Tambahkan kartu baru di `projects.html` (copy blok `<article class="project-card">`) dan arahkan `href`-nya ke `project/nama-baru.html`.
+3. Kartu **tidak wajib** ditambahkan di `index.html` — section My Projects sengaja hanya menampilkan **3 project unggulan**. Tambahkan di `index.html` hanya kalau project itu memang mau dijadikan unggulan (kalau begitu, keluarkan salah satu yang lama supaya tetap 3).
 4. (Opsional) Buat folder galeri `assets/img/nama-baru/` berisi `1.jpg`, `2.jpg`, `3.jpg`.
 
 ## Menambah Sertifikat Baru

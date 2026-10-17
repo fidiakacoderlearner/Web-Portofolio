@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartQueue - Afdhal Fidi Ansori</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="detail">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Afdhal<span>Fidi</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <article class="project-detail">
+        <div class="container">
+            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Semua Project</a>
+
+            <header class="project-detail-head">
+                <h1 class="project-title">SmartQueue</h1>
+                <p class="project-lead">
+                    Aplikasi desktop berbasis JavaFX untuk mengelola sistem antrian asistensi secara real-time.
+                </p>
+            </header>
+
+            <figure class="project-hero">
+                <button type="button" class="zoom-trigger" aria-label="Perbesar gambar SmartQueue">
+                    <img src="../assets/img/project4.jpg" alt="Tampilan SmartQueue"
+                        onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                </button>
+                <figcaption>Pratinjau antarmuka SmartQueue</figcaption>
+            </figure>
+
+            <div class="project-body">
+                <section class="project-section">
+                    <h2>Tentang Project</h2>
+                    <p>
+                        <strong>SmartQueue</strong> adalah aplikasi desktop yang membantu pengelolaan
+                        <em>antrian asistensi</em> di lingkungan perkuliahan. Mahasiswa dapat mengambil nomor
+                        antrian dan memantau posisinya secara langsung, sementara asisten dapat mengatur
+                        antrian, membuka atau menutup layanan, serta mengelola slot asistensi kelompok.
+                    </p>
+                    <p>
+                        Seluruh data antrian dan informasi asistensi disinkronisasi secara <strong>real-time</strong>
+                        melalui Firebase Realtime Database, sehingga status antrian selalu terbaru di setiap
+                        perangkat. Aplikasi dibangun dengan menerapkan konsep Pemrograman Berbasis Objek (OOP)
+                        seperti <em>encapsulation</em>, <em>inheritance</em>, <em>polymorphism</em>, dan
+                        <em>abstraction</em>.
+                    </p>
+                    <p>
+                        Project ini merupakan tugas kelompok mata kuliah <strong>Pemrograman Berbasis Objek (PBO)</strong>
+                        Semester 3, Program Studi Teknik Informatika, Universitas Riau.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Fitur Utama</h2>
+                    <ul class="project-list">
+                        <li>Pemilihan akses sebagai Mahasiswa atau Asisten</li>
+                        <li>Sistem antrian real-time (Menunggu, Sedang Dilayani, Riwayat)</li>
+                        <li>Login dan registrasi akun mahasiswa</li>
+                        <li>Panel asisten untuk mengelola antrian &amp; informasi asistensi</li>
+                        <li>Pengaturan estimasi waktu tunggu dan buka/tutup antrian</li>
+                        <li>Kelola data mahasiswa oleh asisten</li>
+                        <li>Sistem chat antara mahasiswa dan asisten</li>
+                        <li>Manajemen slot asistensi kelompok</li>
+                        <li>Pengaturan pertanyaan keamanan (recovery question)</li>
+                        <li>Sinkronisasi data terpusat lewat Firebase Realtime Database</li>
+                    </ul>
+                </section>
+
+                <section class="project-section">
+                    <h2>Teknologi</h2>
+                    <div class="project-tech">
+                        <span>Java 21</span><span>JavaFX 21</span><span>Maven</span><span>Firebase Admin SDK</span><span>Gson</span><span>BootstrapFX</span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="project-cta">
+                <a href="https://github.com/fidiakacoderlearner/smartqueue" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Lihat Code</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
+        <img class="lightbox-img" src="" alt="" />
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

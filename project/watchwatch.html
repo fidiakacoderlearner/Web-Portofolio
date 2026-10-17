@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WatchWatch - Afdhal Fidi Ansori</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="detail">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Afdhal<span>Fidi</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <article class="project-detail">
+        <div class="container">
+            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Semua Project</a>
+
+            <header class="project-detail-head">
+                <h1 class="project-title">WatchWatch</h1>
+                <p class="project-lead">
+                    Portal review jam tangan berbasis WordPress dengan kategori analog, digital, mekanik, dan smartwatch.
+                </p>
+            </header>
+
+            <figure class="project-hero">
+                <button type="button" class="zoom-trigger" aria-label="Perbesar gambar WatchWatch">
+                    <img src="../assets/img/project6.jpg" alt="Tampilan WatchWatch"
+                        onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
+                </button>
+                <figcaption>Pratinjau halaman utama WatchWatch</figcaption>
+            </figure>
+
+            <div class="project-body">
+                <section class="project-section">
+                    <h2>Tentang Project</h2>
+                    <p>
+                        <strong>WatchWatch</strong> adalah portal review jam tangan yang membahas berbagai jenis jam
+                        tangan — mulai dari <em>analog</em>, <em>digital</em>, <em>mekanik</em>, hingga
+                        <em>smartwatch</em>. Setiap ulasan ditulis dalam bahasa yang mudah dipahami dan disusun
+                        menjadi artikel yang informatif bagi pembaca.
+                    </p>
+                    <p>
+                        Situs dibangun dengan <strong>WordPress</strong> sebagai CMS, sehingga pengelolaan artikel,
+                        kategori, dan halaman statis dapat dilakukan tanpa menyentuh kode. Struktur kontennya rapi
+                        dengan kategori per jenis jam, arsip artikel terbaru, serta dukungan multi-penulis.
+                    </p>
+                    <p>
+                        Project ini merupakan tugas perkuliahan yang dikerjakan secara berkelompok, sekaligus
+                        menjadi latihan membangun dan mengelola situs berbasis CMS untuk kebutuhan publikasi konten.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Fitur Utama</h2>
+                    <ul class="project-list">
+                        <li>Artikel review jam tangan dengan berbagai kategori</li>
+                        <li>Kategori per jenis jam: analog, digital, mekanik, smartwatch</li>
+                        <li>Halaman statis (tentang, kontak, dan lainnya)</li>
+                        <li>Arsip artikel terbaru &amp; pusat artikel</li>
+                        <li>Dukungan multi-penulis</li>
+                        <li>Desain responsif untuk desktop dan mobile</li>
+                    </ul>
+                </section>
+
+                <section class="project-section">
+                    <h2>Teknologi</h2>
+                    <div class="project-tech">
+                        <span>WordPress</span><span>CMS</span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="project-cta">
+                <a href="https://watchwatch.biz.id/" target="_blank" rel="noopener" class="btn primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
+        <img class="lightbox-img" src="" alt="" />
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
