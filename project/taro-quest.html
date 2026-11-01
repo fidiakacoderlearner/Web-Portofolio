@@ -4,145 +4,190 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taro Quest - Afdhal Fidi Ansori</title>
+    <title>Taro Quest — Afdhal Fidi Ansori</title>
+    <meta name="description" content="LKPD interaktif dua bahasa untuk materi komposisi fungsi, dikerjakan bersama tim teaMate." />
+    <meta name="theme-color" content="#f1eadc" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://fidiakacoderlearner.github.io/Web-Portofolio/project/taro-quest.html" />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Taro Quest — Afdhal Fidi Ansori" />
+    <meta property="og:description" content="LKPD interaktif dua bahasa untuk materi komposisi fungsi, dikerjakan bersama tim teaMate." />
+    <meta property="og:url" content="https://fidiakacoderlearner.github.io/Web-Portofolio/project/taro-quest.html" />
+    <meta property="og:image" content="https://fidiakacoderlearner.github.io/Web-Portofolio/assets/img/project5.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="../style.css" />
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
-<body class="detail">
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="../index.html" class="logo">Afdhal<span>Fidi</span></a>
-            <ul class="nav-links">
-                <li><a href="../index.html#home">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
-                <li><a href="../projects.html">Projects</a></li>
-                <li><a href="../index.html#achievements">Achievements</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+<body>
+    <a class="skip" href="#main">Langsung ke konten</a>
+
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="brand" href="../index.html" aria-label="Afdhal Fidi Ansori — beranda">
+                <span class="brand-mark" aria-hidden="true">A</span>
+                <span class="brand-name">Afdhal Fidi <em>Ansori</em></span>
+            </a>
+
+            <nav class="topnav" aria-label="Navigasi utama">
+                <a href="../index.html#about"><span>01</span> Catatan</a>
+                <a href="../index.html#skills"><span>02</span> Peralatan</a>
+                <a href="../projects.html" aria-current="page"><span>03</span> Project</a>
+                <a href="../index.html#achievements"><span>04</span> Sertifikat</a>
+                <a href="../index.html#contact"><span>05</span> Kontak</a>
+            </nav>
+
+            <button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false">
+                <span>Indeks</span>
+                <span class="menu-btn-lines" aria-hidden="true"><i></i><i></i></span>
+            </button>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+    </header>
+
+    <dialog class="menu" id="menu" aria-label="Indeks navigasi">
+        <div class="menu-inner">
+            <div class="menu-top">
+                <span class="eyebrow">Indeks / 2026</span>
+                <button class="menu-close" type="button" data-menu-close>Tutup ×</button>
+            </div>
+            <nav class="menu-nav" aria-label="Navigasi seluler">
+                <a href="../index.html#about"><span>01</span> Catatan Lapangan</a>
+                <a href="../index.html#skills"><span>02</span> Peralatan</a>
+                <a href="../projects.html" aria-current="page"><span>03</span> Project</a>
+                <a href="../certificates.html"><span>04</span> Sertifikat &amp; Penghargaan</a>
+                <a href="../index.html#contact"><span>05</span> Kirim Kabar</a>
+            </nav>
+            <div class="menu-foot">
+                <a href="mailto:afdhalfidi.ansori015@gmail.com">afdhalfidi.ansori015@gmail.com</a>
+                <span>Pekanbaru, Riau</span>
             </div>
         </div>
-    </nav>
+    </dialog>
 
-    <article class="project-detail">
-        <div class="container">
-            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Semua Project</a>
+    <main id="main">
+        <article class="detail">
+            <div class="shell">
+                <a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> Indeks project</a>
 
-            <header class="project-detail-head">
-                <h1 class="project-title">Taro Quest</h1>
-                <p class="project-lead">
-                    Website LKPD interaktif bertema Desa Talas untuk materi komposisi fungsi, dengan antarmuka dua bahasa.
-                </p>
-            </header>
+                <header class="detail-head">
+                    <p class="eyebrow">Project / 04</p>
+                    <h1 class="detail-title">Taro Quest</h1>
+                    <p class="detail-lead">Website LKPD interaktif bertema Desa Talas untuk materi komposisi fungsi, dengan antarmuka dua bahasa.</p>
+                </header>
 
-            <figure class="project-hero">
-                <button type="button" class="zoom-trigger" aria-label="Perbesar gambar Taro Quest">
-                    <img src="../assets/img/project5.jpg" alt="Tampilan Taro Quest"
-                        onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
-                </button>
-                <figcaption>Pratinjau antarmuka Taro Quest</figcaption>
-            </figure>
+                <figure class="detail-figure">
+                    <a class="plate-link" href="../assets/img/project5.jpg" data-viewer
+                        data-caption="Pl. 04 — Pratinjau antarmuka Taro Quest." data-alt="Tampilan antarmuka Taro Quest">
+                        <img src="../assets/img/project5.jpg" alt="Tampilan antarmuka Taro Quest" width="1600"
+                            height="900" fetchpriority="high" decoding="async" />
+                    </a>
+                    <figcaption>Pl. 04 — Pratinjau antarmuka Taro Quest.</figcaption>
+                </figure>
 
-            <div class="project-body">
+                <div class="detail-grid">
+                    <aside class="detail-aside" aria-label="Spesifikasi project">
+                        <dl class="spec">
+                            <div>
+                                <dt>Jenis</dt>
+                                <dd>LKPD dua bahasa</dd>
+                            </div>
+                            <div>
+                                <dt>Peran</dt>
+                                <dd>Tim teaMate — client &amp; server</dd>
+                            </div>
+                            <div>
+                                <dt>Stack</dt>
+                                <dd>React 19 / Vite 7 / Tailwind CSS 4 / Express / PostgreSQL / JWT</dd>
+                            </div>
+                        </dl>
+                    </aside>
+
+                    <div class="detail-body">
+
                 <section class="project-section">
-                    <h2>Tentang Project</h2>
-                    <p>
-                        <strong>Taro Quest</strong> adalah Lembar Kerja Peserta Didik (LKPD) interaktif yang mengajak
-                        siswa mempelajari <em>komposisi fungsi</em> melalui kisah petualangan di Desa Talas bersama
-                        Bu Aza dan Bu Zia. Materi disampaikan lewat alur cerita, eksplorasi terbimbing, eksperimen
-                        <em>drag &amp; drop</em>, hingga kuis evaluasi.
-                    </p>
-                    <p>
-                        Jawaban siswa tersimpan di server sehingga <strong>guru dapat memantau perkembangan belajar</strong>
-                        tiap siswa dan mengelola kelas melalui dashboard. Aplikasi ini berskala internasional:
-                        antarmukanya tersedia dalam dua bahasa (Inggris &amp; Indonesia) sehingga tidak terikat pada
-                        kurikulum nasional tertentu.
-                    </p>
-                    <p>
-                        Aplikasi dibagi menjadi dua bagian: <strong>client</strong> (React 19 + Vite) untuk tampilan
-                        siswa &amp; guru, dan <strong>server</strong> (Express + PostgreSQL) sebagai API dan penyimpanan
-                        data. Dikembangkan oleh tim <strong>teaMate</strong> — Alya Diandra Febry Dalimunthe &amp;
-                        Afdhal Fidi Ansori (Universitas Riau).
-                    </p>
+                    <h2><span>01</span> Tentang project</h2>
+
+                        <p><strong>Taro Quest</strong> adalah Lembar Kerja Peserta Didik (LKPD) interaktif yang mengajak siswa mempelajari <em>komposisi fungsi</em> melalui kisah petualangan di Desa Talas bersama Bu Aza dan Bu Zia. Materi disampaikan lewat alur cerita, eksplorasi terbimbing, eksperimen <em>drag &amp; drop</em>, hingga kuis evaluasi.</p>
+                        <p>Jawaban siswa tersimpan di server sehingga <strong>guru dapat memantau perkembangan belajar</strong> tiap siswa dan mengelola kelas melalui dashboard. Aplikasi ini berskala internasional: antarmukanya tersedia dalam dua bahasa (Inggris &amp; Indonesia) sehingga tidak terikat pada kurikulum nasional tertentu.</p>
+                        <p>Aplikasi dibagi menjadi dua bagian: <strong>client</strong> (React 19 + Vite) untuk tampilan siswa &amp; guru, dan <strong>server</strong> (Express + PostgreSQL) sebagai API dan penyimpanan data. Dikembangkan oleh tim <strong>teaMate</strong> — Alya Diandra Febry Dalimunthe &amp; Afdhal Fidi Ansori (Universitas Riau).</p>
                 </section>
 
                 <section class="project-section">
-                    <h2>Fitur Utama</h2>
-                    <ul class="project-list">
-                        <li>Alur cerita interaktif di Desa Talas bersama Bu Aza &amp; Bu Zia</li>
-                        <li>Eksplorasi materi komposisi fungsi (24 langkah)</li>
-                        <li>Eksperimen drag &amp; drop dan kuis evaluasi interaktif</li>
-                        <li>Penyimpanan jawaban siswa secara otomatis</li>
-                        <li>Dashboard guru untuk memantau progres siswa</li>
-                        <li>Manajemen kelas dengan kode kelas (buat, gabung, keluarkan siswa)</li>
-                        <li>Autentikasi JWT dan role guru / siswa</li>
-                        <li>Antarmuka dua bahasa (Inggris &amp; Indonesia)</li>
-                        <li>Pengujian E2E dengan Playwright</li>
-                    </ul>
+                    <h2><span>02</span> Fitur utama</h2>
+
+                        <ul class="project-list">
+                            <li>Alur cerita interaktif di Desa Talas bersama Bu Aza &amp; Bu Zia</li>
+                            <li>Eksplorasi materi komposisi fungsi (24 langkah)</li>
+                            <li>Eksperimen drag &amp; drop dan kuis evaluasi interaktif</li>
+                            <li>Penyimpanan jawaban siswa secara otomatis</li>
+                            <li>Dashboard guru untuk memantau progres siswa</li>
+                            <li>Manajemen kelas dengan kode kelas (buat, gabung, keluarkan siswa)</li>
+                            <li>Autentikasi JWT dan role guru / siswa</li>
+                            <li>Antarmuka dua bahasa (Inggris &amp; Indonesia)</li>
+                            <li>Pengujian E2E dengan Playwright</li>
+                        </ul>
                 </section>
 
                 <section class="project-section">
-                    <h2>Teknologi</h2>
-                    <div class="project-tech">
-                        <span>React 19</span><span>Vite 7</span><span>Tailwind CSS 4</span><span>Express</span><span>PostgreSQL</span><span>JWT</span><span>Vercel</span>
+                    <h2><span>03</span> Teknologi</h2>
+
+                        <div class="project-tech">
+                            <span>React 19</span><span>Vite 7</span><span>Tailwind CSS 4</span><span>Express</span><span>PostgreSQL</span><span>JWT</span><span>Vercel</span>
+                        </div>
+                </section>
+
                     </div>
-                </section>
+                </div>
 
-                <section class="project-section">
-                    <h2>Galeri</h2>
-                    <div class="project-gallery">
-                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 1">
-                            <img src="../assets/img/taro-quest/1.jpg" alt="Taro Quest - tangkapan layar 1"
-                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
-                        </button>
-                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 2">
-                            <img src="../assets/img/taro-quest/2.jpg" alt="Taro Quest - tangkapan layar 2"
-                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
-                        </button>
-                        <button type="button" class="zoom-trigger" aria-label="Perbesar gambar 3">
-                            <img src="../assets/img/taro-quest/3.jpg" alt="Taro Quest - tangkapan layar 3"
-                                onerror="this.onerror=null;this.src='../assets/img/placeholder.svg';" />
-                        </button>
-                    </div>
-                </section>
+                <div class="detail-cta">
+                    <a class="btn btn-solid" href="https://github.com/fidiakacoderlearner/taro-quest" target="_blank" rel="noopener">Lihat code <span aria-hidden="true">↗</span></a>
+                    <a class="btn" href="https://taro-quest.vercel.app" target="_blank" rel="noopener">Live demo <span aria-hidden="true">↗</span></a>
+                </div>
+
+                <nav class="detail-nav" aria-label="Navigasi project">
+                    <a class="link-arrow" href="cooking-number.html"><span aria-hidden="true">←</span> Sebelumnya: Cooking Number</a>
+                    <a class="link-arrow" href="watchwatch.html">Berikutnya: WatchWatch <span aria-hidden="true">→</span></a>
+                </nav>
             </div>
+        </article>
+    </main>
 
-            <div class="project-cta">
-                <a href="https://github.com/fidiakacoderlearner/taro-quest" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Lihat Code</a>
-                <a href="https://taro-quest.vercel.app" target="_blank" rel="noopener" class="btn secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            </div>
-        </div>
-    </article>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        <div class="shell footer-grid">
+            <p class="footer-mark" aria-hidden="true">AF</p>
+            <div class="footer-info">
+                <p>Disusun oleh Afdhal Fidi Ansori di Pekanbaru.</p>
+                <p>Fraunces · Work Sans · IBM Plex Mono</p>
+            </div>
+            <p class="footer-year">© <span data-year>2026</span></p>
         </div>
     </footer>
 
-    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <button class="to-top" type="button" data-to-top aria-label="Kembali ke atas">↑</button>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
-        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
-        <img class="lightbox-img" src="" alt="" />
-    </div>
+    <dialog class="viewer" id="viewer" aria-label="Pratinjau dokumen">
+        <div class="viewer-inner">
+            <div class="viewer-top">
+                <p class="viewer-count" data-viewer-count>01 / 03</p>
+                <button class="viewer-close" type="button" data-viewer-close>Tutup ×</button>
+            </div>
+            <div class="viewer-stage">
+                <button class="viewer-nav" type="button" data-viewer-prev aria-label="Dokumen sebelumnya">←</button>
+                <img class="viewer-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
+                <button class="viewer-nav" type="button" data-viewer-next aria-label="Dokumen berikutnya">→</button>
+            </div>
+            <p class="viewer-caption" data-viewer-caption></p>
+        </div>
+    </dialog>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../script.js"></script>
 </body>
 

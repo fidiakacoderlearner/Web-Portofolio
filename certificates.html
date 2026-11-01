@@ -4,169 +4,200 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Certificates - Afdhal Fidi Ansori</title>
+    <title>Sertifikat &amp; Penghargaan — Afdhal Fidi Ansori</title>
+    <meta name="description"
+        content="Sertifikat dan penghargaan Afdhal Fidi Ansori: LIDM, LKTI IKON, Lomba Media Pembelajaran, dan Esai Olimpiade Pendidikan Ekonomi." />
+    <meta name="theme-color" content="#f1eadc" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://fidiakacoderlearner.github.io/Web-Portofolio/certificates.html" />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sertifikat &amp; Penghargaan — Afdhal Fidi Ansori" />
+    <meta property="og:description" content="Empat sertifikat dan penghargaan dari kompetisi yang saya ikuti." />
+    <meta property="og:url" content="https://fidiakacoderlearner.github.io/Web-Portofolio/certificates.html" />
+    <meta property="og:image"
+        content="https://fidiakacoderlearner.github.io/Web-Portofolio/assets/img/cert-media.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Afdhal<span>Fidi</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="index.html#achievements">Achievements</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <a class="skip" href="#main">Langsung ke konten</a>
 
-    <!-- Page Header -->
-    <header class="page-hero">
-        <div class="container">
-            <h1 class="page-title">Achievements &amp; <em>Certificates</em></h1>
-            <p class="page-lead">
-                Kumpulan prestasi dan sertifikat lomba yang pernah saya raih. Klik salah satu kartu
-                untuk melihat sertifikatnya dalam ukuran besar.
-            </p>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="brand" href="index.html" aria-label="Afdhal Fidi Ansori — beranda">
+                <span class="brand-mark" aria-hidden="true">A</span>
+                <span class="brand-name">Afdhal Fidi <em>Ansori</em></span>
+            </a>
+
+            <nav class="topnav" aria-label="Navigasi utama">
+                <a href="index.html#about"><span>01</span> Catatan</a>
+                <a href="index.html#skills"><span>02</span> Peralatan</a>
+                <a href="projects.html"><span>03</span> Project</a>
+                <a href="certificates.html" aria-current="page"><span>04</span> Sertifikat</a>
+                <a href="index.html#contact"><span>05</span> Kontak</a>
+            </nav>
+
+            <button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false">
+                <span>Indeks</span>
+                <span class="menu-btn-lines" aria-hidden="true"><i></i><i></i></span>
+            </button>
         </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
     </header>
 
-    <!-- Certificates List -->
-    <section class="projects projects-list">
-        <div class="container">
-            <div class="achievements-grid">
-                <!-- Certificate 1 -->
-                <article class="achievement-card" data-aos="fade-up">
-                    <div class="achievement-header">
-                        <div class="achievement-badge finalis">Finalis</div>
-                        <h3 class="achievement-title">LIDM – Finalis Universitas Riau 2026</h3>
-                    </div>
-                    <div class="achievement-body">
-                        <div class="achievement-meta">
-                            <span><i class="fas fa-building"></i> Universitas Riau</span>
-                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
-                        </div>
-                        <p class="achievement-desc">
-                            Finalis dalam ajang Lomba Inovasi Digital Mahasiswa (LIDM) Universitas Riau Tahun 2026.
-                        </p>
-                    </div>
-                    <div class="achievement-media">
-                        <button type="button" class="zoom-trigger" aria-label="Perbesar sertifikat LIDM">
-                            <img src="assets/img/cert-lidm.jpg" alt="Sertifikat LIDM Finalis Universitas Riau"
-                                onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Certificate 2 -->
-                <article class="achievement-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="achievement-header">
-                        <div class="achievement-badge juara3">Juara 3</div>
-                        <h3 class="achievement-title">LKTI – Inovasi Karya Online Nasional (IKON)</h3>
-                    </div>
-                    <div class="achievement-body">
-                        <div class="achievement-meta">
-                            <span><i class="fas fa-building"></i> Universitas Mataram</span>
-                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
-                        </div>
-                        <p class="achievement-desc">
-                            Tema: <em>“Inovasi Generasi Muda dalam Mewujudkan Indonesia Emas 2045 melalui Ilmu Pengetahuan dan Teknologi”</em>.
-                        </p>
-                    </div>
-                    <div class="achievement-media">
-                        <button type="button" class="zoom-trigger" aria-label="Perbesar sertifikat LKTI IKON">
-                            <img src="assets/img/cert-lkti.jpg" alt="Sertifikat LKTI IKON Juara 3"
-                                onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Certificate 3 -->
-                <article class="achievement-card" data-aos="fade-up" data-aos-delay="150">
-                    <div class="achievement-header">
-                        <div class="achievement-badge juara1">Juara 1</div>
-                        <h3 class="achievement-title">Lomba Media Pembelajaran – Semarak Teknologi Pendidikan 2026</h3>
-                    </div>
-                    <div class="achievement-body">
-                        <div class="achievement-meta">
-                            <span><i class="fas fa-building"></i> Universitas Lambung Mangkurat</span>
-                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
-                        </div>
-                        <p class="achievement-desc">
-                            Tema: <em>“Transformasi Pembelajaran Digital”</em>.
-                        </p>
-                    </div>
-                    <div class="achievement-media">
-                        <button type="button" class="zoom-trigger" aria-label="Perbesar sertifikat Media Pembelajaran">
-                            <img src="assets/img/cert-media.jpg" alt="Sertifikat Juara 1 Lomba Media Pembelajaran"
-                                onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Certificate 4 -->
-                <article class="achievement-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="achievement-header">
-                        <div class="achievement-badge harapan1">Harapan 1</div>
-                        <h3 class="achievement-title">Esai Olimpiade &amp; Milad Pendidikan Ekonomi</h3>
-                    </div>
-                    <div class="achievement-body">
-                        <div class="achievement-meta">
-                            <span><i class="fas fa-building"></i> UIN Sultan Syarif Kasim Riau</span>
-                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
-                        </div>
-                        <p class="achievement-desc">
-                            Harapan I kategori esai, diselenggarakan oleh Himpunan Mahasiswa Pendidikan Ekonomi, 13 Oktober 2026.
-                        </p>
-                    </div>
-                    <div class="achievement-media">
-                        <button type="button" class="zoom-trigger" aria-label="Perbesar sertifikat Esai Olimpiade &amp; Milad Pendidikan Ekonomi">
-                            <img src="assets/img/cert-esai.jpg" alt="Sertifikat Harapan I Esai Olimpiade &amp; Milad Pendidikan Ekonomi"
-                                onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                        </button>
-                    </div>
-                </article>
+    <dialog class="menu" id="menu" aria-label="Indeks navigasi">
+        <div class="menu-inner">
+            <div class="menu-top">
+                <span class="eyebrow">Indeks / 2026</span>
+                <button class="menu-close" type="button" data-menu-close>Tutup ×</button>
             </div>
-
-            <div class="projects-more" data-aos="fade-up">
-                <a href="index.html" class="btn secondary"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+            <nav class="menu-nav" aria-label="Navigasi seluler">
+                <a href="index.html#about"><span>01</span> Catatan Lapangan</a>
+                <a href="index.html#skills"><span>02</span> Peralatan</a>
+                <a href="projects.html"><span>03</span> Project</a>
+                <a href="certificates.html" aria-current="page"><span>04</span> Sertifikat &amp; Penghargaan</a>
+                <a href="index.html#contact"><span>05</span> Kirim Kabar</a>
+            </nav>
+            <div class="menu-foot">
+                <a href="mailto:afdhalfidi.ansori015@gmail.com">afdhalfidi.ansori015@gmail.com</a>
+                <span>Pekanbaru, Riau</span>
             </div>
         </div>
-    </section>
+    </dialog>
 
-    <!-- Footer -->
+    <main id="main">
+        <header class="page-head">
+            <div class="shell">
+                <p class="eyebrow">Sertifikat / 04</p>
+                <h1 class="page-title">Sertifikat &amp; <em>penghargaan.</em></h1>
+                <p class="page-lead">
+                    Empat sertifikat dan penghargaan dari kompetisi yang saya ikuti. Klik kartu untuk membuka
+                    pratinjau; gunakan panah kiri dan kanan untuk berpindah.
+                </p>
+                <div class="page-meta">
+                    <span>04 sertifikat</span>
+                    <span>2026</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="listing" aria-label="Daftar sertifikat">
+            <div class="shell">
+                <div class="stamp-grid stamp-grid--archive">
+                    <a class="stamp" href="assets/img/cert-lidm.jpg" data-viewer
+                        data-caption="LIDM — Finalis Universitas Riau 2026"
+                        data-alt="Sertifikat LIDM Finalis Universitas Riau">
+                        <span class="stamp-top">
+                            <span class="stamp-award is-finalis">Finalis</span>
+                            <span class="stamp-year">2026</span>
+                        </span>
+                        <h2 class="stamp-title">LIDM</h2>
+                        <span class="stamp-org">Universitas Riau</span>
+                        <span class="stamp-desc">Lomba Inovasi Digital Mahasiswa.</span>
+                        <span class="stamp-thumb">
+                            <img src="assets/img/cert-lidm.jpg" alt="" width="1600" height="1131" fetchpriority="high"
+                                decoding="async" />
+                        </span>
+                        <span class="stamp-foot">Buka dokumen <span aria-hidden="true">↗</span></span>
+                    </a>
+
+                    <a class="stamp" href="assets/img/cert-lkti.jpg" data-viewer
+                        data-caption="LKTI IKON — Juara 3, Universitas Mataram 2026"
+                        data-alt="Sertifikat LKTI IKON Juara 3">
+                        <span class="stamp-top">
+                            <span class="stamp-award is-juara3">Juara 3</span>
+                            <span class="stamp-year">2026</span>
+                        </span>
+                        <h2 class="stamp-title">LKTI IKON</h2>
+                        <span class="stamp-org">Universitas Mataram</span>
+                        <span class="stamp-desc">Inovasi Karya Online Nasional.</span>
+                        <span class="stamp-thumb">
+                            <img src="assets/img/cert-lkti.jpg" alt="" width="1600" height="1131" loading="lazy"
+                                decoding="async" />
+                        </span>
+                        <span class="stamp-foot">Buka dokumen <span aria-hidden="true">↗</span></span>
+                    </a>
+
+                    <a class="stamp" href="assets/img/cert-media.jpg" data-viewer
+                        data-caption="Lomba Media Pembelajaran — Juara 1, Universitas Lambung Mangkurat 2026"
+                        data-alt="Sertifikat Juara 1 Lomba Media Pembelajaran">
+                        <span class="stamp-top">
+                            <span class="stamp-award is-juara1">Juara 1</span>
+                            <span class="stamp-year">2026</span>
+                        </span>
+                        <h2 class="stamp-title">Media Pembelajaran</h2>
+                        <span class="stamp-org">Universitas Lambung Mangkurat</span>
+                        <span class="stamp-desc">Semarak Teknologi Pendidikan.</span>
+                        <span class="stamp-thumb">
+                            <img src="assets/img/cert-media.jpg" alt="" width="1600" height="1131" loading="lazy"
+                                decoding="async" />
+                        </span>
+                        <span class="stamp-foot">Buka dokumen <span aria-hidden="true">↗</span></span>
+                    </a>
+
+                    <a class="stamp" href="assets/img/cert-esai.jpg" data-viewer
+                        data-caption="Esai Olimpiade &amp; Milad Pendidikan Ekonomi — Harapan 1, UIN Suska Riau 2026"
+                        data-alt="Sertifikat Harapan I Esai Olimpiade dan Milad Pendidikan Ekonomi">
+                        <span class="stamp-top">
+                            <span class="stamp-award is-harapan1">Harapan 1</span>
+                            <span class="stamp-year">2026</span>
+                        </span>
+                        <h2 class="stamp-title">Esai Olimpiade</h2>
+                        <span class="stamp-org">UIN Sultan Syarif Kasim Riau</span>
+                        <span class="stamp-desc">Milad Pendidikan Ekonomi, kategori esai.</span>
+                        <span class="stamp-thumb">
+                            <img src="assets/img/cert-esai.jpg" alt="" width="1600" height="1131" loading="lazy"
+                                decoding="async" />
+                        </span>
+                        <span class="stamp-foot">Buka dokumen <span aria-hidden="true">↗</span></span>
+                    </a>
+                </div>
+
+                <div class="listing-foot">
+                    <a class="link-arrow" href="index.html"><span aria-hidden="true">←</span> Kembali ke beranda</a>
+                    <a class="link-arrow" href="projects.html">Lihat project <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        <div class="shell footer-grid">
+            <p class="footer-mark" aria-hidden="true">AF</p>
+            <div class="footer-info">
+                <p>Disusun oleh Afdhal Fidi Ansori di Pekanbaru.</p>
+                <p>Fraunces · Work Sans · IBM Plex Mono</p>
+            </div>
+            <p class="footer-year">© <span data-year>2026</span></p>
         </div>
     </footer>
 
-    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <button class="to-top" type="button" data-to-top aria-label="Kembali ke atas">↑</button>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
-        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
-        <img class="lightbox-img" src="" alt="" />
-    </div>
+    <dialog class="viewer" id="viewer" aria-label="Pratinjau dokumen">
+        <div class="viewer-inner">
+            <div class="viewer-top">
+                <p class="viewer-count" data-viewer-count>01 / 04</p>
+                <button class="viewer-close" type="button" data-viewer-close>Tutup ×</button>
+            </div>
+            <div class="viewer-stage">
+                <button class="viewer-nav" type="button" data-viewer-prev aria-label="Dokumen sebelumnya">←</button>
+                <img class="viewer-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
+                <button class="viewer-nav" type="button" data-viewer-next aria-label="Dokumen berikutnya">→</button>
+            </div>
+            <p class="viewer-caption" data-viewer-caption></p>
+        </div>
+    </dialog>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 

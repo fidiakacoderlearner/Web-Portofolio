@@ -4,157 +4,191 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects - Afdhal Fidi Ansori</title>
+    <title>Indeks Project — Afdhal Fidi Ansori</title>
+    <meta name="description"
+        content="Lima project Afdhal Fidi Ansori: LKPD interaktif, game edukasi matematika, simulasi bisnis, dan portal berbasis WordPress." />
+    <meta name="theme-color" content="#f1eadc" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://fidiakacoderlearner.github.io/Web-Portofolio/projects.html" />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Indeks Project — Afdhal Fidi Ansori" />
+    <meta property="og:description" content="Lima project: LKPD interaktif, game edukasi, simulasi bisnis, dan CMS." />
+    <meta property="og:url" content="https://fidiakacoderlearner.github.io/Web-Portofolio/projects.html" />
+    <meta property="og:image"
+        content="https://fidiakacoderlearner.github.io/Web-Portofolio/assets/img/project1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Afdhal<span>Fidi</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="index.html#achievements">Achievements</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <a class="skip" href="#main">Langsung ke konten</a>
 
-    <!-- Page Header -->
-    <header class="page-hero">
-        <div class="container">
-            <h1 class="page-title">All <em>Projects</em></h1>
-            <p class="page-lead">
-                Kumpulan project yang pernah saya kerjakan — dari aplikasi pembelajaran interaktif,
-                permainan edukasi matematika, hingga website berbasis web. Klik salah satu kartu untuk
-                melihat detail lengkapnya.
-            </p>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="brand" href="index.html" aria-label="Afdhal Fidi Ansori — beranda">
+                <span class="brand-mark" aria-hidden="true">A</span>
+                <span class="brand-name">Afdhal Fidi <em>Ansori</em></span>
+            </a>
+
+            <nav class="topnav" aria-label="Navigasi utama">
+                <a href="index.html#about"><span>01</span> Catatan</a>
+                <a href="index.html#skills"><span>02</span> Peralatan</a>
+                <a href="projects.html" aria-current="page"><span>03</span> Project</a>
+                <a href="index.html#achievements"><span>04</span> Sertifikat</a>
+                <a href="index.html#contact"><span>05</span> Kontak</a>
+            </nav>
+
+            <button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false">
+                <span>Indeks</span>
+                <span class="menu-btn-lines" aria-hidden="true"><i></i><i></i></span>
+            </button>
         </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
     </header>
 
-    <!-- Projects List -->
-    <section class="projects projects-list">
-        <div class="container">
-            <div class="projects-grid">
-                <article class="project-card" data-aos="fade-up">
-                    <img src="assets/img/project1.jpg" alt="Cassava Village — LKPD Interaktif"
-                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                    <div class="project-content">
-                        <h3><a class="project-link" href="project/cassava-village.html">Cassava Village</a></h3>
-                        <p>Website LKPD interaktif bertema Desa Singkong untuk materi komposisi fungsi (Fase F). Dilengkapi alur cerita, eksplorasi, kuis interaktif, dan penyimpanan jawaban siswa agar dapat dipantau guru.</p>
-                        <div class="project-tech">
-                            <span>React 19</span><span>Vite</span><span>Tailwind</span><span>Express</span><span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/fidiakacoderlearner/cassava-village" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://cassava-village.vercel.app" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="assets/img/project2.jpg" alt="Mathbiz Riau — Simulasi Bisnis Edukasi"
-                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                    <div class="project-content">
-                        <h3><a class="project-link" href="project/mathbiz-riau.html">Mathbiz Riau</a></h3>
-                        <p>Permainan edukasi berbasis web yang menggabungkan matematika, kewirausahaan, dan budaya Melayu Riau. Pemain membangun usaha virtual mulai dari perencanaan bisnis, produksi, hingga penjualan sambil menyelesaikan tantangan matematika.</p>
-                        <div class="project-tech">
-                            <span>React 19</span><span>Vite</span><span>Tailwind</span><span>Context API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/fidiakacoderlearner/great-riau-mathbiz" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://great-riau-mathbiz.vercel.app" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/img/project3.jpg" alt="Cooking Number — Game Edukasi Matematika"
-                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                    <div class="project-content">
-                        <h3><a class="project-link" href="project/cooking-number.html">Cooking Number</a></h3>
-                        <p>Game edukasi matematika untuk siswa SMP bertema restoran. Pelanggan memesan sebuah angka, lalu pemain menyusun angka-angka yang tersedia dengan operator matematika hingga cocok, kemudian menyajikannya.</p>
-                        <div class="project-tech">
-                            <span>Vanilla JS</span><span>interact.js</span><span>Web Audio API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/fidiakacoderlearner/cooking_number" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://cookingnumber.vercel.app" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="assets/img/project5.jpg" alt="Taro Quest — LKPD Interaktif Komposisi Fungsi"
-                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                    <div class="project-content">
-                        <h3><a class="project-link" href="project/taro-quest.html">Taro Quest</a></h3>
-                        <p>Website LKPD interaktif bertema Desa Talas untuk materi komposisi fungsi. Berisi alur cerita, eksplorasi, kuis interaktif, dan penyimpanan jawaban siswa yang dapat dipantau guru, dengan antarmuka dua bahasa (Inggris &amp; Indonesia).</p>
-                        <div class="project-tech">
-                            <span>React 19</span><span>Vite</span><span>Tailwind</span><span>Express</span><span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/fidiakacoderlearner/taro-quest" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://taro-quest.vercel.app" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <img src="assets/img/project6.jpg" alt="WatchWatch — Portal Review Jam Tangan"
-                        onerror="this.onerror=null;this.src='assets/img/placeholder.svg';" />
-                    <div class="project-content">
-                        <h3><a class="project-link" href="project/watchwatch.html">WatchWatch</a></h3>
-                        <p>Portal review jam tangan berbasis WordPress dengan kategori analog, digital, mekanik, dan smartwatch. Dilengkapi artikel multi-penulis, kategori, dan halaman statis.</p>
-                        <div class="project-tech">
-                            <span>WordPress</span><span>CMS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://watchwatch.biz.id/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </article>
+    <dialog class="menu" id="menu" aria-label="Indeks navigasi">
+        <div class="menu-inner">
+            <div class="menu-top">
+                <span class="eyebrow">Indeks / 2026</span>
+                <button class="menu-close" type="button" data-menu-close>Tutup ×</button>
             </div>
-
-            <div class="projects-more" data-aos="fade-up">
-                <a href="index.html" class="btn secondary"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+            <nav class="menu-nav" aria-label="Navigasi seluler">
+                <a href="index.html#about"><span>01</span> Catatan Lapangan</a>
+                <a href="index.html#skills"><span>02</span> Peralatan</a>
+                <a href="projects.html" aria-current="page"><span>03</span> Project</a>
+                <a href="index.html#achievements"><span>04</span> Sertifikat &amp; Penghargaan</a>
+                <a href="index.html#contact"><span>05</span> Kirim Kabar</a>
+            </nav>
+            <div class="menu-foot">
+                <a href="mailto:afdhalfidi.ansori015@gmail.com">afdhalfidi.ansori015@gmail.com</a>
+                <span>Pekanbaru, Riau</span>
             </div>
         </div>
-    </section>
+    </dialog>
 
-    <!-- Footer -->
+    <main id="main">
+        <header class="page-head">
+            <div class="shell">
+                <p class="eyebrow">Project / 03</p>
+                <h1 class="page-title">Semua <em>project.</em></h1>
+                <p class="page-lead">
+                    Lima project yang saya kerjakan dari awal sampai bisa dipakai — dari LKPD interaktif dan game
+                    edukasi sampai simulasi bisnis dan portal berbasis CMS.
+                </p>
+                <div class="page-meta">
+                    <span>05 project</span>
+                    <span>Web · Game · CMS</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="listing" aria-label="Daftar project">
+            <div class="shell">
+                <ol class="index-list">
+                    <li class="index-item" data-preview="assets/img/project1.jpg">
+                        <a class="index-link" href="project/cassava-village.html">
+                            <span class="index-num">01</span>
+                            <span class="index-main">
+                                <span class="index-title">Cassava Village</span>
+                                <span class="index-desc">LKPD interaktif komposisi fungsi untuk Fase F</span>
+                            </span>
+                            <span class="index-meta">React / Express / PostgreSQL</span>
+                            <span class="index-arrow" aria-hidden="true">↗</span>
+                            <img class="index-thumb" src="assets/img/project1.jpg" alt="" width="1600" height="900"
+                                fetchpriority="high" decoding="async" />
+                        </a>
+                    </li>
+
+                    <li class="index-item" data-preview="assets/img/project2.jpg">
+                        <a class="index-link" href="project/mathbiz-riau.html">
+                            <span class="index-num">02</span>
+                            <span class="index-main">
+                                <span class="index-title">Mathbiz Riau</span>
+                                <span class="index-desc">Simulasi bisnis + matematika, bernuansa Melayu Riau</span>
+                            </span>
+                            <span class="index-meta">React / Context API / Local Storage</span>
+                            <span class="index-arrow" aria-hidden="true">↗</span>
+                            <img class="index-thumb" src="assets/img/project2.jpg" alt="" width="1600" height="900"
+                                loading="lazy" decoding="async" />
+                        </a>
+                    </li>
+
+                    <li class="index-item" data-preview="assets/img/project3.jpg">
+                        <a class="index-link" href="project/cooking-number.html">
+                            <span class="index-num">03</span>
+                            <span class="index-main">
+                                <span class="index-title">Cooking Number</span>
+                                <span class="index-desc">Game menyusun angka bertema restoran untuk siswa SMP</span>
+                            </span>
+                            <span class="index-meta">Vanilla JS / interact.js / Web Audio API</span>
+                            <span class="index-arrow" aria-hidden="true">↗</span>
+                            <img class="index-thumb" src="assets/img/project3.jpg" alt="" width="1600" height="900"
+                                loading="lazy" decoding="async" />
+                        </a>
+                    </li>
+
+                    <li class="index-item" data-preview="assets/img/project5.jpg">
+                        <a class="index-link" href="project/taro-quest.html">
+                            <span class="index-num">04</span>
+                            <span class="index-main">
+                                <span class="index-title">Taro Quest</span>
+                                <span class="index-desc">LKPD interaktif dua bahasa, dikerjakan bersama teaMate</span>
+                            </span>
+                            <span class="index-meta">React / Express / PostgreSQL</span>
+                            <span class="index-arrow" aria-hidden="true">↗</span>
+                            <img class="index-thumb" src="assets/img/project5.jpg" alt="" width="1600" height="900"
+                                loading="lazy" decoding="async" />
+                        </a>
+                    </li>
+
+                    <li class="index-item" data-preview="assets/img/project6.jpg">
+                        <a class="index-link" href="project/watchwatch.html">
+                            <span class="index-num">05</span>
+                            <span class="index-main">
+                                <span class="index-title">WatchWatch</span>
+                                <span class="index-desc">Portal review jam tangan berbasis WordPress</span>
+                            </span>
+                            <span class="index-meta">WordPress / CMS</span>
+                            <span class="index-arrow" aria-hidden="true">↗</span>
+                            <img class="index-thumb" src="assets/img/project6.jpg" alt="" width="1600" height="900"
+                                loading="lazy" decoding="async" />
+                        </a>
+                    </li>
+                </ol>
+
+                <div class="listing-foot">
+                    <a class="link-arrow" href="index.html"><span aria-hidden="true">←</span> Kembali ke beranda</a>
+                    <a class="link-arrow" href="certificates.html">Lihat sertifikat <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Afdhal Fidi Ansori. All Rights Reserved.</p>
+        <div class="shell footer-grid">
+            <p class="footer-mark" aria-hidden="true">AF</p>
+            <div class="footer-info">
+                <p>Disusun oleh Afdhal Fidi Ansori di Pekanbaru.</p>
+                <p>Fraunces · Work Sans · IBM Plex Mono</p>
+            </div>
+            <p class="footer-year">© <span data-year>2026</span></p>
         </div>
     </footer>
 
-    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <button class="to-top" type="button" data-to-top aria-label="Kembali ke atas">↑</button>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" aria-hidden="true">
-        <button class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
-        <img class="lightbox-img" src="" alt="" />
+    <div class="cursor-preview" aria-hidden="true">
+        <div class="cursor-preview-inner"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" /></div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 

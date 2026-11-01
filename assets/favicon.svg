@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Afdhal Fidi Ansori">
+    <rect width="64" height="64" fill="#f1eadc"/>
+    <path d="M14 50 L32 12 L50 50" fill="none" stroke="#17140f" stroke-width="4" stroke-linecap="square"/>
+    <path d="M23 38 H41" fill="none" stroke="#c0442b" stroke-width="4"/>
+</svg>

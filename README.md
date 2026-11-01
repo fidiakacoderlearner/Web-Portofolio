@@ -1,182 +1,281 @@
 # Portofolio — Afdhal Fidi Ansori
 
-Website portofolio dengan tema **navy + off-white**, gaya *editorial minimalis*.
-Halaman utama berupa satu halaman (single page), ditambah **halaman daftar project**,
-**halaman detail** tiap project, dan **halaman daftar sertifikat**.
+Situs portofolio statis dengan konsep **ATLAS**: katalog pameran tempat project ditampilkan
+sebagai plat katalog, sertifikat dan penghargaan sebagai dokumen pameran, catatan diri sebagai
+lembar lapangan, dan kontak sebagai kartu pos.
 
-- Tipografi: **Playfair Display** (judul) · **Plus Jakarta Sans** (teks) · **JetBrains Mono** (meta)
-- Tanpa gradasi, tanpa warna putih pekat (off-white `#f6f7fb`), aksen navy `#1e3a8a`
+Tidak ada build step, framework, AOS, Font Awesome, atau form kontak. Semua halaman adalah HTML,
+satu stylesheet, dan satu file JavaScript. Situs bisa dibuka langsung dari `index.html` atau
+di-hosting di GitHub Pages.
+
+## Halaman
+
+| File | Isi |
+|---|---|
+| `index.html` | Beranda: hero, 01 Catatan Lapangan, 02 Peralatan, 03 Project (3 project unggulan), 04 Sertifikat & Penghargaan (3 sertifikat dan penghargaan), 05 Kirim Kabar |
+| `projects.html` | Indeks lengkap 5 project yang ditampilkan |
+| `certificates.html` | Sertifikat & Penghargaan — 4 sertifikat dan penghargaan dengan document viewer |
+| `project/cassava-village.html` | Detail Cassava Village + galeri 3 gambar |
+| `project/mathbiz-riau.html` | Detail Mathbiz Riau + galeri 3 gambar |
+| `project/cooking-number.html` | Detail Cooking Number + galeri 3 gambar |
+| `project/taro-quest.html` | Detail Taro Quest (tanpa galeri) |
+| `project/watchwatch.html` | Detail WatchWatch (tanpa galeri) |
+| `project/smartqueue.html` | Detail SmartQueue — **tidak ditautkan dari indeks**, hanya bisa dibuka lewat URL langsung |
+
+SmartQueue sengaja belum dimasukkan ke `projects.html` dan beranda. Halaman detailnya tetap
+dipertahankan sebagai halaman terpisah.
 
 ## Struktur File
 
 ```
 Web-Portofolio/
-├── index.html              # Halaman utama (semua section jadi satu)
-├── projects.html           # Halaman daftar semua project
-├── certificates.html       # Halaman daftar semua sertifikat
-├── style.css               # Seluruh styling (dipakai semua halaman)
-├── script.js               # Interaksi (navbar, back-to-top, lightbox, animasi)
-├── README.md               # File ini
-├── project/                # Halaman detail tiap project
+├── index.html
+├── projects.html
+├── certificates.html
+├── style.css
+├── script.js
+├── README.md
+├── project/
 │   ├── cassava-village.html
 │   ├── mathbiz-riau.html
 │   ├── cooking-number.html
-│   ├── smartqueue.html    # halaman detail disimpan, kartunya belum tampil
 │   ├── taro-quest.html
-│   └── watchwatch.html
+│   ├── watchwatch.html
+│   └── smartqueue.html
 └── assets/
+    ├── favicon.svg
     └── img/
-        ├── profile.jpg     # Foto profil (hero)
-        ├── about.jpg       # Foto About
-        ├── project1.jpg    # Thumbnail Cassava Village
-        ├── project2.jpg    # Thumbnail Mathbiz Riau
-        ├── project3.jpg    # Thumbnail Cooking Number
-        ├── project4.jpg    # Thumbnail SmartQueue (belum dipakai)
-        ├── project5.jpg    # Thumbnail Taro Quest
-        ├── project6.jpg    # Thumbnail WatchWatch
-        ├── cert-lidm.jpg   # Sertifikat LIDM
-        ├── cert-lkti.jpg   # Sertifikat LKTI IKON
-        ├── cert-media.jpg  # Sertifikat Media Pembelajaran
-        ├── cert-esai.jpg   # Sertifikat Esai Olimpiade & Milad Pendidikan Ekonomi (Harapan 1)
-        ├── placeholder.svg # Fallback otomatis kalau gambar belum ada
-        ├── cassava/        # Galeri Cassava Village (1.jpg, 2.jpg, 3.jpg)
-        ├── mathbiz/        # Galeri Mathbiz Riau (1.jpg, 2.jpg, 3.jpg)
-        ├── cooking/        # Galeri Cooking Number (1.jpg, 2.jpg, 3.jpg)
-        ├── smartqueue/     # Galeri SmartQueue (isi sendiri, belum dipakai)
-        ├── taro-quest/     # Galeri Taro Quest (isi sendiri)
-        └── watchwatch/     # Galeri WatchWatch (isi sendiri)
+        ├── profile.jpg          # foto hero (ditampilkan 4:5)
+        ├── about.jpg            # tidak dipakai lagi; disimpan sebagai aset lama
+        ├── project1.jpg         # Cassava Village
+        ├── project2.jpg         # Mathbiz Riau
+        ├── project3.jpg         # Cooking Number
+        ├── project5.jpg         # Taro Quest
+        ├── project6.jpg         # WatchWatch
+        ├── cert-lidm.jpg
+        ├── cert-lkti.jpg
+        ├── cert-media.jpg
+        ├── cert-esai.jpg
+        ├── placeholder.svg      # cadangan lama; saat ini tidak direferensikan
+        ├── cassava/1–3.jpg
+        ├── mathbiz/1–3.jpg
+        └── cooking/1–3.jpg
 ```
 
-## Cara Menjalankan
+`project4.jpg`, `assets/img/taro-quest/`, `assets/img/watchwatch/`, dan
+`assets/img/smartqueue/` belum ada. Karena itu SmartQueue tidak masuk indeks, dan halaman Taro
+Quest serta WatchWatch hanya memakai gambar hero.
 
-Buka `index.html` di browser (klik dua kali). Tidak perlu instalasi apa pun.
+## Sistem Desain
 
-> Kalau sudah pernah buka sebelumnya, lakukan **hard refresh** (`Ctrl + Shift + R`) supaya perubahan tampil.
+### Warna
 
----
-
-## Alur Navigasi
-
-```
-index.html
-   ├──(tombol "Lihat Selengkapnya" di section Projects)────►  projects.html
-   │                                                              │
-   │         └──(klik salah satu kartu project)───────────────────┘
-   │                       │
-   │                       ▼
-   │           project/<nama-project>.html   (halaman detail)
-   │
-   └──(tombol "Lihat Selengkapnya" di section Achievements)──►  certificates.html
-```
-
-- **Klik kartu project** (di `index.html` maupun `projects.html`) → masuk ke halaman detail.
-- Tombol **"Lihat Selengkapnya"** di bawah section My Projects → ke `projects.html`.
-- Tombol **"Lihat Selengkapnya"** di bawah section Achievements & Certificates → ke `certificates.html`.
-- **Klik kartu sertifikat** (di `index.html` maupun `certificates.html`) → muncul preview besar (lightbox). Sertifikat **tidak** punya halaman detail.
-- Di halaman detail project ada tombol **"Semua Project"** untuk kembali ke `projects.html`.
-
----
-
-## Daftar Gambar
-
-Semua gambar sudah terisi, **kecuali gambar untuk 2 project baru yang tampil** (`project5.jpg`,
-`project6.jpg` dan galeri `taro-quest/`, `watchwatch/`) — itu diisi sendiri oleh pemilik.
-`project4.jpg` dan galeri `smartqueue/` juga belum ada, tapi keduanya **belum dipakai** karena kartu
-SmartQueue ditarik sementara dari `projects.html` (halaman detailnya tetap ada).
-Selama file belum ada, otomatis tampil **placeholder** (`assets/img/placeholder.svg`) — jadi tidak akan
-muncul ikon rusak. Cukup simpan file dengan **nama persis** seperti tabel di bawah.
-
-| File | Bagian | Ukuran file |
+| Token | Nilai | Pemakaian |
 |---|---|---|
-| `assets/img/profile.jpg` | Foto profil (hero) | ±140 KB |
-| `assets/img/about.jpg` | Foto bagian About | ±140 KB |
-| `assets/img/project1.jpg` | Thumbnail Cassava Village | ±170 KB |
-| `assets/img/project2.jpg` | Thumbnail Mathbiz Riau | ±50 KB |
-| `assets/img/project3.jpg` | Thumbnail Cooking Number | ±40 KB |
-| `assets/img/project4.jpg` | Thumbnail SmartQueue | ⚠️ **belum dipakai** (kartunya belum tampil) |
-| `assets/img/project5.jpg` | Thumbnail Taro Quest | ⚠️ **isi sendiri** (ada gambar sementara) |
-| `assets/img/project6.jpg` | Thumbnail WatchWatch | ⚠️ **isi sendiri** (ada gambar sementara) |
-| `assets/img/cert-lidm.jpg` | Sertifikat LIDM | ±260 KB |
-| `assets/img/cert-lkti.jpg` | Sertifikat LKTI IKON | ±210 KB |
-| `assets/img/cert-media.jpg` | Sertifikat Media Pembelajaran | ±230 KB |
-| `assets/img/cert-esai.jpg` | Sertifikat Esai Olimpiade & Milad Pendidikan Ekonomi (Harapan 1) | ±320 KB |
-| `assets/img/cassava/1–3.jpg` | Galeri Cassava Village | ±160–210 KB |
-| `assets/img/mathbiz/1–3.jpg` | Galeri Mathbiz Riau | ±80–90 KB |
-| `assets/img/cooking/1–3.jpg` | Galeri Cooking Number | ±50–80 KB |
-| `assets/img/smartqueue/1–3.jpg` | Galeri SmartQueue | ⚠️ **isi sendiri** |
-| `assets/img/taro-quest/1–3.jpg` | Galeri Taro Quest | ⚠️ **isi sendiri** |
-| `assets/img/watchwatch/1–3.jpg` | Galeri WatchWatch | ⚠️ **isi sendiri** |
+| `--paper` | `#f1eadc` | latar utama |
+| `--paper-2` | `#e7decb` | panel, kartu sertifikat, kontak |
+| `--ink` | `#17140f` | teks utama |
+| `--ink-soft` | `#4a4438` | teks sekunder |
+| `--muted` | `#5f584b` | metadata |
+| `--vermilion` | `#c0442b` | aksen, garis, seleksi |
+| `--vermilion-ink` | `#a3331e` | teks aksen |
+| `--teal` | `#14524b` | aksen dingin |
+| `--ochre` | `#7a5510` | nomor, label, detail sertifikat |
 
-> **Catatan ukuran:** semua gambar sudah dioptimalkan (maks lebar **1600 px**, JPEG kualitas ±82).
-> Total folder `assets/img` ± **2,7 MB**.
+Warna teks sudah dipilih agar tetap terbaca di atas `--paper` dan `--paper-2`. Aksen ochre
+memakai versi yang lebih gelap dari sekadar hiasan agar lolos kontras untuk teks kecil.
 
-### Catatan Penting
+### Tipografi
 
-- **Nama harus sama persis** (huruf kecil semua, termasuk `.jpg`).
-- Format didukung: **JPG, PNG, atau WebP**. Kalau beda format, samakan namanya atau ubah `src` di HTML.
-- Ukuran disarankan hanya panduan; **rasio** lebih penting supaya tidak terpotong aneh.
-- **Optimalkan gambar** (idealnya < 300 KB) supaya web cepat dibuka.
-- Semua gambar bisa **diklik untuk diperbesar** (lightbox): gambar di halaman detail, gambar
-  galeri, dan sertifikat di kartu Achievements (klik di mana saja pada kartunya).
+- **Fraunces** — judul, nama, kutipan. Variabel optik dan italic dipakai untuk aksen.
+- **Work Sans** — teks isi dan antarmuka.
+- **IBM Plex Mono** — metadata, nomor, label, koordinat, jam.
 
-### Ukuran Gambar (biar tidak terpotong)
+Font dimuat dari Google Fonts di setiap halaman. Ada fallback sistem jika font gagal dimuat.
 
-Tiap tempat menampilkan gambar dengan rasio tertentu. Supaya **tidak terpotong**, samakan
-rasio file gambar dengan tabel di bawah:
+### Aturan Visual
 
-| Tempat tampil | Rasio tampil | Ukuran disarankan |
-|---|---|---|
-| Thumbnail project (kartu) | 16 : 9 (`cover`) | 1600 × 900 px |
-| Hero halaman detail project | 16 : 9 (`cover`) | 1600 × 900 px |
-| Galeri halaman detail project | 4 : 3 (`cover`) | 1200 × 900 px |
-| Thumbnail sertifikat (kartu) | 16 : 10 (`cover`) | 1600 × 1131 px |
-| Foto profil (hero) | potret (4:5) | 1000 × 1250 px |
-| Foto About | potret (4:5) | 800 × 1000 px |
+- Tanpa gradient, tanpa glassmorphism, tanpa bayangan kartu yang tebal.
+- Sudut tajam, garis rambut, ruang kosong besar, dan komposisi asimetris.
+- Tekstur kertas halus dibuat dengan lapisan CSS, bukan gambar.
+- Foto hero diperlakukan sebagai pelat katalog: bingkai 4:5, garis tipis, crop mark, dan caption
+  `Pl. 01`.
+- Bagian About sepenuhnya tipografis; tidak ada foto About.
 
-> **Preview (lightbox) TIDAK memotong gambar.** Gambar tampil utuh dengan rasio aslinya,
-> hanya dibatasi maksimum **1100 px lebar** dan **86% tinggi layar**. Jadi di preview semua
-> bagian pasti kelihatan. Yang memotong hanya *thumbnail* (kartu), karena memakai `object-fit: cover`.
+### Gerak
 
-**Mau ubah ukuran maksimum preview?** Edit variabel di `style.css` bagian `:root`:
+- Nama di hero muncul dengan mask reveal per baris.
+- Elemen `[data-reveal]` muncul saat masuk viewport.
+- Ada cursor-following project preview di desktop (hanya untuk pointer halus).
+- Progress baca, penanda chapter aktif, jam WIB, dan tombol kembali ke atas.
+- Semua animasi dihentikan atau disederhanakan saat `prefers-reduced-motion: reduce`.
 
-```css
---preview-max-w: 1100px;   /* lebar maksimum gambar preview */
---preview-max-h: 86vh;     /* tinggi maksimum (persen dari tinggi layar) */
+## Interaksi dan JavaScript
+
+`script.js` tidak memakai library. Perilaku utama:
+
+- **Jam WIB** — memakai `Intl.DateTimeFormat` dengan zona `Asia/Jakarta`, diperbarui tiap 30 detik.
+- **Menu seluler** — `<dialog>` native, body dikunci saat terbuka, bisa ditutup dengan tombol,
+  klik backdrop, atau `Escape`.
+- **Document viewer** — `<dialog>` native untuk sertifikat dan gambar project. Panah kiri/kanan
+  berpindah dokumen, `Escape` menutup. Jumlah dokumen dihitung otomatis dari elemen
+  `[data-viewer]`, jadi tidak perlu mengubah angka manual saat menambah gambar.
+- **Salin email** — memakai Clipboard API; jika tidak tersedia, jatuh ke `execCommand("copy")`.
+  Label berubah menjadi “Tersalin” selama 2,2 detik.
+- **Cursor preview** — gambar project mengikuti kursor saat item indeks di-hover. Nonaktif di
+  perangkat sentuh dan saat reduced motion.
+- **Navigasi chapter** — `IntersectionObserver` menandai chapter yang sedang dibaca.
+- **Reveal** — `IntersectionObserver` menambahkan `.is-visible`; tanpa JavaScript konten tetap
+  terlihat karena kelas `.js` hanya ditambahkan lewat script.
+- **Progress baca dan to-top** — dihitung dari posisi scroll.
+- **Tahun** — `[data-year]` diisi otomatis.
+
+Fallback tanpa JavaScript: semua konten tetap terbaca, tautan sertifikat mengarah langsung ke
+file gambar, dan navigasi utama tetap tampil sebagai baris tautan (menu dialog hanya dipakai
+saat JavaScript aktif).
+
+## Menjalankan Secara Lokal
+
+Buka `index.html` langsung di browser sudah cukup untuk melihat halaman. Untuk pengalaman yang
+paling konsisten (terutama Clipboard API dan dialog), gunakan server lokal:
+
+```bash
+python -m http.server 8000
 ```
 
-### Cara Menaruh Gambar
+atau, jika Node.js tersedia:
 
-1. Siapkan filenya, rename sesuai nama di tabel (contoh: `about.jpg`).
-2. Pindahkan ke folder yang sesuai (`assets/img/` atau subfolder `cassava/`, `mathbiz/`, `cooking/`, `smartqueue/`, `taro-quest/`, `watchwatch/`).
-3. Refresh browser.
+```bash
+npx serve .
+```
 
----
+Lalu buka `http://localhost:8000`.
 
-## Bagian Halaman (index.html)
+Font Google memerlukan koneksi internet. Jika offline, browser memakai fallback font dan layout
+tetap berjalan.
 
-| Section | Isi |
-|---|---|
-| Hero | Nama, foto profil, tombol, sosial media |
-| About | Perkenalan diri |
-| Skills | Daftar kemampuan (Core, Frontend, Backend, Database, Design & CMS, Soft Skills) |
-| Projects | **3 project unggulan** + tombol "Lihat Selengkapnya" → `projects.html` (semua project) |
-| Achievements | Prestasi lomba + sertifikat (klik kartu = preview besar) + tombol "Lihat Selengkapnya" |
-| Contact | Kontak & form |
+## Deploy ke GitHub Pages
 
-## Daftar Project
+1. Push perubahan ke branch `main`.
+2. Buka **Settings → Pages** di repository.
+3. Pilih **Deploy from a branch**, branch `main`, folder `/ (root)`.
+4. Situs tersedia di `https://fidiakacoderlearner.github.io/Web-Portofolio/`.
 
-| Project | Deskripsi Singkat | Repo | Demo |
-|---|---|---|---|
-| **Cassava Village** | LKPD interaktif materi komposisi fungsi | [GitHub](https://github.com/fidiakacoderlearner/cassava-village) | [Demo](https://cassava-village.vercel.app) |
-| **Mathbiz Riau** | Simulasi bisnis edukasi (matematika + kewirausahaan) | [GitHub](https://github.com/fidiakacoderlearner/great-riau-mathbiz) | [Demo](https://great-riau-mathbiz.vercel.app) |
-| **Cooking Number** | Game edukasi matematika untuk siswa SMP | [GitHub](https://github.com/fidiakacoderlearner/cooking_number) | [Demo](https://cookingnumber.vercel.app) |
-| **SmartQueue** | Aplikasi desktop JavaFX untuk sistem antrian asistensi real-time | [GitHub](https://github.com/fidiakacoderlearner/smartqueue) | — |
-| **Taro Quest** | LKPD interaktif materi komposisi fungsi (2 bahasa) | [GitHub](https://github.com/fidiakacoderlearner/taro-quest) | [Demo](https://taro-quest.vercel.app) |
-| **WatchWatch** | Portal review jam tangan berbasis WordPress | — | [Demo](https://watchwatch.biz.id/) |
+Navigasi dan aset memakai path relatif, jadi strukturnya bisa dipindahkan ke subfolder lain.
+Namun `canonical` dan `og:url` memakai URL absolut GitHub Pages; perbarui keduanya jika situs
+pindah domain.
 
-> **SmartQueue** masih didata di sini, tapi kartunya **belum ditampilkan** di `projects.html`
-> (ditarik sementara). Halaman detailnya (`project/smartqueue.html`) tetap ada — untuk
-> menampilkannya lagi cukup menambahkan kembali satu kartu di `projects.html`.
+## Mengedit Konten
+
+### Beranda
+
+Edit `index.html`. Chapter ditandai dengan `data-chapter` dan `id` yang sesuai:
+
+- `#about` — Catatan Lapangan
+- `#skills` — Peralatan
+- `#projects` — Project
+- `#achievements` — Sertifikat & Penghargaan
+- `#contact` — Kirim Kabar
+
+Navigasi desktop memakai `data-nav`; jangan hapus atribut itu jika ingin penanda chapter aktif
+tetap bekerja.
+
+### Indeks Project
+
+Edit `projects.html`. Setiap project adalah satu `<li class="index-item">` dengan:
+
+- `data-preview` — gambar yang muncul di cursor preview.
+- `href` — halaman detail di `project/`.
+- `.index-thumb` — thumbnail untuk mobile.
+- Nomor, judul, deskripsi, dan stack.
+
+Untuk menambah project:
+
+1. Buat halaman detail baru di `project/` (copy salah satu halaman yang ada, lalu ubah isi,
+   `title`, `description`, `og:image`, dan `canonical`).
+2. Tambahkan `<li>` baru di `projects.html` dan arahkan `href`-nya.
+3. Tambahkan thumbnail ke `assets/img/`.
+4. Jika ingin tampil di beranda, tambahkan juga item di bagian `#projects` pada `index.html`
+   (beranda sengaja hanya menampilkan 3 project unggulan).
+5. Jika ada galeri, tambahkan gambar ke `assets/img/<nama-project>/` dan tambahkan
+   `data-viewer` pada setiap gambar.
+
+### Sertifikat
+
+Edit `certificates.html` dan bagian `#achievements` di `index.html`. Satu sertifikat adalah satu
+`<a class="stamp" data-viewer>`:
+
+- `href` — file gambar sertifikat.
+- `data-caption` — caption di viewer.
+- `data-alt` — alt text untuk gambar viewer.
+- `.stamp-thumb img` — thumbnail kartu.
+
+Jumlah dokumen di viewer dihitung otomatis. Jika menambah sertifikat ke halaman sertifikat,
+tambahkan kartunya di akhir grid; grid sertifikat memakai dua kolom di desktop dan satu kolom di
+layar kecil.
+
+### SmartQueue
+
+Untuk menampilkan SmartQueue lagi:
+
+1. Tambahkan `project4.jpg` ke `assets/img/`.
+2. Tambahkan satu `<li class="index-item">` di `projects.html` dengan nomor yang sesuai.
+3. Opsional: tambahkan ke beranda jika ingin dijadikan unggulan.
+4. Jika nanti ada screenshot, tambahkan galeri ke `project/smartqueue.html` dengan pola yang sama
+   seperti project lain.
+
+## Gambar
+
+### Spesifikasi
+
+| Tempat | Rasio tampil | Ukuran disarankan |
+|---|---|---|
+| Foto hero | 4:5 (`cover`) | 1000 × 1250 px |
+| Thumbnail project / hero detail | 16:9 (`cover`) | 1600 × 900 px |
+| Galeri detail | 4:3 (`cover`) | 1200 × 900 px |
+| Thumbnail sertifikat | 16:10 (`cover`) | 1600 × 1131 px (A4; crop 16:10) |
+| Document viewer | rasio asli (`contain`) | maksimal 1600 px sisi terpanjang |
+
+Thumbnail memakai `object-fit: cover`, jadi bagian tepi bisa terpotong. Viewer menampilkan gambar
+utuh dengan `object-fit: contain`.
+
+### Catatan Teknis
+
+- Gambar konten (foto, thumbnail, galeri) memiliki `width` dan `height` untuk mengurangi layout
+  shift.
+- CSS memakai `img { height: auto; }`; jangan menambahkan `height` tetap pada gambar yang memakai
+  `aspect-ratio`.
+- Gambar hero dan gambar pertama yang terlihat di halaman indeks/sertifikat memakai
+  `fetchpriority="high"`; gambar lain memakai `loading="lazy"`.
+- `profile.jpg` saat ini berukuran 1000 × 1000 dan ditampilkan dalam bingkai 4:5. Jika ingin
+  hasil crop yang lebih tepat, gunakan foto potret 1000 × 1250.
+- `about.jpg` tidak lagi dipakai. File dibiarkan agar tidak menghapus aset lama.
+- `placeholder.svg` juga tidak direferensikan lagi.
+
+## Aksesibilitas dan Performa
+
+- Skip link ke `#main` di setiap halaman.
+- Struktur heading hierarkis, landmark `header`, `nav`, `main`, `footer`, dan `aside` berlabel.
+- Dialog native untuk menu dan viewer, dengan focus trap bawaan browser.
+- Tombol viewer dan menu memiliki `aria-label`; kartu sertifikat memakai `data-alt`.
+- Navigasi keyboard: `Tab`, `Enter`, `Escape`, panah kiri/kanan di viewer.
+- `prefers-reduced-motion` menonaktifkan animasi masuk dan cursor preview.
+- Tanpa JavaScript, konten tetap terlihat, navigasi utama tetap tampil, dan tautan gambar tetap
+  berfungsi.
+- Tidak ada framework atau library JavaScript; hanya satu stylesheet dan satu script.
+- Font eksternal dari Google Fonts; gambar JPEG sudah dikompresi.
+
+### Pemeriksaan Cepat
+
+Jika Node.js tersedia, validasi opsional:
+
+```bash
+npx --yes html-validate --rule void-style:off --rule no-trailing-whitespace:off index.html projects.html certificates.html project/*.html
+npx --yes csstree-validator style.css
+node --check script.js
+```
+
+Untuk audit performa dan aksesibilitas, jalankan Lighthouse dari Chrome DevTools pada server lokal.
 
 ## Kontak
 
@@ -184,29 +283,4 @@ rasio file gambar dengan tabel di bawah:
 - Instagram: [@3.14di](https://www.instagram.com/3.14di/)
 - LinkedIn: [afdhal-fidi-ansori](https://www.linkedin.com/in/afdhal-fidi-ansori)
 - Email: afdhalfidi.ansori015@gmail.com
-
----
-
-## Menambah Project Baru
-
-1. Buat file baru di `project/`, mis. `project/nama-baru.html` (copy salah satu halaman yang ada, lalu ubah isinya).
-2. Tambahkan kartu baru di `projects.html` (copy blok `<article class="project-card">`) dan arahkan `href`-nya ke `project/nama-baru.html`.
-3. Kartu **tidak wajib** ditambahkan di `index.html` — section My Projects sengaja hanya menampilkan **3 project unggulan**. Tambahkan di `index.html` hanya kalau project itu memang mau dijadikan unggulan (kalau begitu, keluarkan salah satu yang lama supaya tetap 3).
-4. (Opsional) Buat folder galeri `assets/img/nama-baru/` berisi `1.jpg`, `2.jpg`, `3.jpg`.
-
-## Menambah Sertifikat Baru
-
-1. Simpan gambar sertifikatnya di `assets/img/`.
-2. Tambahkan kartu baru di **`certificates.html`** — copy blok `<article class="achievement-card">` dan
-   taruh **paling akhir**. Grid-nya 3 kolom, jadi sertifikat baru otomatis duduk di baris berikutnya.
-3. Ubah `src` gambar, judul, badge, dan keterangannya. Badge yang sudah ada di `style.css`:
-   `finalis`, `juara1`, `juara3`, `harapan1`.
-4. **Homepage sengaja hanya 3 kartu** (section Achievements). Kalau sertifikat barunya mau tampil di
-   homepage juga, **ganti** salah satu dari 3 kartu yang ada — jangan ditambah jadi 4.
-
-## Kustomisasi Cepat
-
-- **Warna**: ubah variabel di awal `style.css` (bagian `:root`), mis. `--primary` untuk warna navy.
-- **Font**: di-`import` pada bagian `<head>` di tiap halaman.
-- **Teks halaman utama**: `index.html`.
-- **Teks halaman detail**: file di folder `project/`.
+- Lokasi: Pekanbaru, Riau, Indonesia
