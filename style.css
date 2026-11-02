@@ -1788,7 +1788,7 @@ em {
 
     .hero-title-row {
         display: grid;
-        grid-template-columns: max-content minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) auto;
         gap: clamp(0.75rem, 3vw, 1rem);
         align-items: start;
     }

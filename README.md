@@ -99,8 +99,8 @@ Font dimuat dari Google Fonts di setiap halaman. Ada fallback sistem jika font g
 - Sudut tajam, garis rambut, ruang kosong besar, dan komposisi asimetris.
 - Tekstur kertas halus dibuat dengan lapisan CSS, bukan gambar.
 - Di desktop, foto hero diperlakukan sebagai pelat katalog: bingkai 4:5, garis tipis, crop mark,
-  dan caption `Pl. 01`. Di mobile/tablet, pelat besar diganti avatar bulat kecil di sebelah kanan
-  judul nama agar foto tidak jatuh di bawah status.
+  dan caption `Pl. 01`. Di mobile/tablet, pelat besar diganti avatar bulat kecil di sisi kanan,
+  dengan judul nama di sisi kiri, agar foto tidak jatuh di bawah status.
 - Bagian About sepenuhnya tipografis; tidak ada foto About.
 
 ### Gerak
