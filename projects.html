@@ -39,45 +39,32 @@
             </a>
 
             <nav class="topnav" aria-label="Navigasi utama">
-                <a href="index.html#about"><span>01</span> Catatan</a>
-                <a href="index.html#skills"><span>02</span> Peralatan</a>
-                <a href="projects.html" aria-current="page"><span>03</span> Project</a>
-                <a href="index.html#achievements"><span>04</span> Sertifikat</a>
-                <a href="index.html#contact"><span>05</span> Kontak</a>
+                <a href="index.html#about">Catatan</a>
+                <a href="index.html#skills">Peralatan</a>
+                <a href="projects.html" aria-current="page">Project</a>
+                <a href="index.html#achievements">Sertifikat</a>
+                <a href="index.html#contact">Kontak</a>
             </nav>
 
-            <button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false">
-                <span>Indeks</span>
+            <button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false"
+                aria-label="Buka menu">
                 <span class="menu-btn-lines" aria-hidden="true"><i></i><i></i></span>
             </button>
+
+            <nav class="menu-dropdown" id="menu" aria-label="Navigasi seluler" hidden>
+                <a href="index.html#about">Catatan</a>
+                <a href="index.html#skills">Peralatan</a>
+                <a href="projects.html" aria-current="page">Project</a>
+                <a href="index.html#achievements">Sertifikat</a>
+                <a href="index.html#contact">Kontak</a>
+            </nav>
         </div>
         <div class="progress" aria-hidden="true"><span></span></div>
     </header>
 
-    <dialog class="menu" id="menu" aria-label="Indeks navigasi">
-        <div class="menu-inner">
-            <div class="menu-top">
-                <span class="eyebrow">Indeks / 2026</span>
-                <button class="menu-close" type="button" data-menu-close>Tutup ×</button>
-            </div>
-            <nav class="menu-nav" aria-label="Navigasi seluler">
-                <a href="index.html#about"><span>01</span> Catatan Lapangan</a>
-                <a href="index.html#skills"><span>02</span> Peralatan</a>
-                <a href="projects.html" aria-current="page"><span>03</span> Project</a>
-                <a href="index.html#achievements"><span>04</span> Sertifikat &amp; Penghargaan</a>
-                <a href="index.html#contact"><span>05</span> Kirim Kabar</a>
-            </nav>
-            <div class="menu-foot">
-                <a href="mailto:afdhalfidi.ansori015@gmail.com">afdhalfidi.ansori015@gmail.com</a>
-                <span>Pekanbaru, Riau</span>
-            </div>
-        </div>
-    </dialog>
-
     <main id="main">
         <header class="page-head">
             <div class="shell">
-                <p class="eyebrow">Project / 03</p>
                 <h1 class="page-title">Semua <em>project.</em></h1>
                 <p class="page-lead">
                     Lima project yang saya kerjakan dari awal sampai bisa dipakai — dari LKPD interaktif dan game
@@ -173,13 +160,9 @@
     </main>
 
     <footer class="footer">
-        <div class="shell footer-grid">
-            <p class="footer-mark" aria-hidden="true">AF</p>
-            <div class="footer-info">
-                <p>Disusun oleh Afdhal Fidi Ansori di Pekanbaru.</p>
-                <p>Fraunces · Work Sans · IBM Plex Mono</p>
-            </div>
-            <p class="footer-year">© <span data-year>2026</span></p>
+        <div class="shell footer-inner">
+            <span class="brand-mark footer-mark" aria-hidden="true">A</span>
+            <p class="footer-copy">© 2026 Afdhal Fidi Ansori. Dibuat dengan <em>ko(pi + de)</em>.</p>
         </div>
     </footer>
 

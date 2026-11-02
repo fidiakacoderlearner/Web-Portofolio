@@ -10,13 +10,6 @@
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
-    /* ---------- Tahun ---------- */
-    const yearEls = document.querySelectorAll("[data-year]");
-    const thisYear = String(new Date().getFullYear());
-    yearEls.forEach((el) => {
-        el.textContent = thisYear;
-    });
-
     /* ---------- Jam lokal (WIB) ---------- */
     const clockEls = document.querySelectorAll("[data-clock]");
     if (clockEls.length) {
@@ -51,55 +44,44 @@
         window.setInterval(updateClock, 30000);
     }
 
-    /* ---------- Menu seluler ---------- */
+    /* ---------- Menu seluler (dropdown) ---------- */
     const menu = document.getElementById("menu");
     const menuOpen = document.querySelector("[data-menu-open]");
-    const menuClose = document.querySelector("[data-menu-close]");
+    let menuIsOpen = false;
 
-    const openMenu = () => {
-        if (!menu) return;
-        if (typeof menu.showModal === "function") {
-            menu.showModal();
-        } else {
-            menu.setAttribute("open", "");
+    const setMenu = (open) => {
+        if (!menu || !menuOpen) return;
+        menuIsOpen = open;
+        menu.hidden = !open;
+        menuOpen.setAttribute("aria-expanded", String(open));
+        menuOpen.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+        if (open) {
+            const firstLink = menu.querySelector("a");
+            if (firstLink) firstLink.focus({ preventScroll: true });
         }
-        document.body.classList.add("is-locked");
-        if (menuOpen) menuOpen.setAttribute("aria-expanded", "true");
-    };
-
-    const closeMenu = () => {
-        if (!menu) return;
-        if (typeof menu.close === "function") {
-            menu.close();
-        } else {
-            menu.removeAttribute("open");
-        }
-        document.body.classList.remove("is-locked");
-        if (menuOpen) menuOpen.setAttribute("aria-expanded", "false");
     };
 
     if (menu && menuOpen) {
-        menuOpen.addEventListener("click", openMenu);
-        if (menuClose) menuClose.addEventListener("click", closeMenu);
+        menuOpen.addEventListener("click", () => setMenu(!menuIsOpen));
 
         menu.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
-                closeMenu();
-            });
+            link.addEventListener("click", () => setMenu(false));
         });
 
-        menu.addEventListener("click", (event) => {
-            if (event.target === menu) closeMenu();
+        document.addEventListener("click", (event) => {
+            if (!menuIsOpen) return;
+            if (menu.contains(event.target) || menuOpen.contains(event.target)) return;
+            setMenu(false);
         });
 
-        menu.addEventListener("close", () => {
-            document.body.classList.remove("is-locked");
-            if (menuOpen) menuOpen.setAttribute("aria-expanded", "false");
+        document.addEventListener("keydown", (event) => {
+            if (event.key !== "Escape" || !menuIsOpen) return;
+            setMenu(false);
+            menuOpen.focus();
         });
 
-        menu.addEventListener("cancel", () => {
-            document.body.classList.remove("is-locked");
-            if (menuOpen) menuOpen.setAttribute("aria-expanded", "false");
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 900 && menuIsOpen) setMenu(false);
         });
     }
 
@@ -422,9 +404,14 @@
             area.value = text;
             area.setAttribute("readonly", "");
             area.style.position = "fixed";
+            area.style.top = "0";
+            area.style.left = "0";
+            area.style.fontSize = "16px";
             area.style.opacity = "0";
             document.body.appendChild(area);
+            area.focus();
             area.select();
+            area.setSelectionRange(0, area.value.length);
             let success = false;
             try {
                 success = document.execCommand("copy");
@@ -451,11 +438,6 @@
 
             markCopied(legacyCopy(text));
         });
-    }
-
-    /* ---------- Tandai halaman aktif di menu ---------- */
-    if (menuOpen) {
-        menuOpen.setAttribute("aria-expanded", "false");
     }
 
     // Pastikan kelas .js selalu ada meski inline script gagal.

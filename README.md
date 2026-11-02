@@ -12,7 +12,7 @@ di-hosting di GitHub Pages.
 
 | File | Isi |
 |---|---|
-| `index.html` | Beranda: hero, 01 Catatan Lapangan, 02 Peralatan, 03 Project (3 project unggulan), 04 Sertifikat & Penghargaan (3 sertifikat dan penghargaan), 05 Kirim Kabar |
+| `index.html` | Beranda: hero, Catatan Lapangan, Peralatan, Project (3 project unggulan), Sertifikat & Penghargaan (3 sertifikat dan penghargaan), Kontak |
 | `projects.html` | Indeks lengkap 5 project yang ditampilkan |
 | `certificates.html` | Sertifikat & Penghargaan — 4 sertifikat dan penghargaan dengan document viewer |
 | `project/cassava-village.html` | Detail Cassava Village + galeri 3 gambar |
@@ -45,7 +45,7 @@ Web-Portofolio/
 └── assets/
     ├── favicon.svg
     └── img/
-        ├── profile.jpg          # foto hero (ditampilkan 4:5)
+        ├── profile.jpg          # foto hero: plat 4:5 di desktop, avatar kecil di mobile
         ├── about.jpg            # tidak dipakai lagi; disimpan sebagai aset lama
         ├── project1.jpg         # Cassava Village
         ├── project2.jpg         # Mathbiz Riau
@@ -89,7 +89,7 @@ memakai versi yang lebih gelap dari sekadar hiasan agar lolos kontras untuk teks
 
 - **Fraunces** — judul, nama, kutipan. Variabel optik dan italic dipakai untuk aksen.
 - **Work Sans** — teks isi dan antarmuka.
-- **IBM Plex Mono** — metadata, nomor, label, koordinat, jam.
+- **IBM Plex Mono** — metadata, nomor, label, jam.
 
 Font dimuat dari Google Fonts di setiap halaman. Ada fallback sistem jika font gagal dimuat.
 
@@ -98,8 +98,9 @@ Font dimuat dari Google Fonts di setiap halaman. Ada fallback sistem jika font g
 - Tanpa gradient, tanpa glassmorphism, tanpa bayangan kartu yang tebal.
 - Sudut tajam, garis rambut, ruang kosong besar, dan komposisi asimetris.
 - Tekstur kertas halus dibuat dengan lapisan CSS, bukan gambar.
-- Foto hero diperlakukan sebagai pelat katalog: bingkai 4:5, garis tipis, crop mark, dan caption
-  `Pl. 01`.
+- Di desktop, foto hero diperlakukan sebagai pelat katalog: bingkai 4:5, garis tipis, crop mark,
+  dan caption `Pl. 01`. Di mobile/tablet, pelat besar diganti avatar bulat kecil di samping judul
+  nama agar foto tidak jatuh di bawah status.
 - Bagian About sepenuhnya tipografis; tidak ada foto About.
 
 ### Gerak
@@ -115,24 +116,27 @@ Font dimuat dari Google Fonts di setiap halaman. Ada fallback sistem jika font g
 `script.js` tidak memakai library. Perilaku utama:
 
 - **Jam WIB** — memakai `Intl.DateTimeFormat` dengan zona `Asia/Jakarta`, diperbarui tiap 30 detik.
-- **Menu seluler** — `<dialog>` native, body dikunci saat terbuka, bisa ditutup dengan tombol,
-  klik backdrop, atau `Escape`.
+- **Menu seluler** — dropdown ringkas di bawah topbar, memakai label yang sama dengan navbar.
+  Bisa ditutup dengan tombol hamburger, klik di luar, `Escape`, atau setelah memilih tautan.
+  Tidak mengunci scroll dan tidak membuka halaman baru.
 - **Document viewer** — `<dialog>` native untuk sertifikat dan gambar project. Panah kiri/kanan
   berpindah dokumen, `Escape` menutup. Jumlah dokumen dihitung otomatis dari elemen
   `[data-viewer]`, jadi tidak perlu mengubah angka manual saat menambah gambar.
-- **Salin email** — memakai Clipboard API; jika tidak tersedia, jatuh ke `execCommand("copy")`.
-  Label berubah menjadi “Tersalin” selama 2,2 detik.
+- **Salin email** — tombol utama kontak; memakai Clipboard API dan jatuh ke `execCommand("copy")`
+  bila perlu. Label berubah menjadi “Tersalin” selama 2,2 detik. Tautan `mailto:` tetap ada
+  sebagai jalur sekunder untuk perangkat yang punya aplikasi email.
 - **Cursor preview** — gambar project mengikuti kursor saat item indeks di-hover. Nonaktif di
   perangkat sentuh dan saat reduced motion.
 - **Navigasi chapter** — `IntersectionObserver` menandai chapter yang sedang dibaca.
 - **Reveal** — `IntersectionObserver` menambahkan `.is-visible`; tanpa JavaScript konten tetap
   terlihat karena kelas `.js` hanya ditambahkan lewat script.
 - **Progress baca dan to-top** — dihitung dari posisi scroll.
-- **Tahun** — `[data-year]` diisi otomatis.
+
+Footer memakai tahun statis `2026` dan logo A dalam lingkaran yang sama dengan header.
 
 Fallback tanpa JavaScript: semua konten tetap terbaca, tautan sertifikat mengarah langsung ke
-file gambar, dan navigasi utama tetap tampil sebagai baris tautan (menu dialog hanya dipakai
-saat JavaScript aktif).
+file gambar, dan navigasi utama tetap tampil sebagai baris tautan (dropdown hanya dipakai saat
+JavaScript aktif).
 
 ## Menjalankan Secara Lokal
 
@@ -175,10 +179,10 @@ Edit `index.html`. Chapter ditandai dengan `data-chapter` dan `id` yang sesuai:
 - `#skills` — Peralatan
 - `#projects` — Project
 - `#achievements` — Sertifikat & Penghargaan
-- `#contact` — Kirim Kabar
+- `#contact` — Kontak
 
-Navigasi desktop memakai `data-nav`; jangan hapus atribut itu jika ingin penanda chapter aktif
-tetap bekerja.
+Navigasi desktop dan dropdown mobile memakai `data-nav`; jangan hapus atribut itu jika ingin
+penanda chapter aktif tetap bekerja.
 
 ### Indeks Project
 

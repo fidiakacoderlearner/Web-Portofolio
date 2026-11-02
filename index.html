@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Afdhal Fidi Ansori — Atlas Karya</title>
+    <title>Afdhal Fidi Ansori — Portofolio</title>
     <meta name="description"
         content="Portofolio Afdhal Fidi Ansori, mahasiswa Teknik Informatika Universitas Riau. LKPD interaktif, game edukasi matematika, dan aplikasi web." />
     <meta name="theme-color" content="#f1eadc" />
@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://fidiakacoderlearner.github.io/Web-Portofolio/" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Afdhal Fidi Ansori — Atlas Karya" />
+    <meta property="og:title" content="Afdhal Fidi Ansori — Portofolio" />
     <meta property="og:description"
         content="Portofolio Afdhal Fidi Ansori: LKPD interaktif, game edukasi matematika, dan aplikasi web." />
     <meta property="og:url" content="https://fidiakacoderlearner.github.io/Web-Portofolio/" />
@@ -41,41 +41,28 @@
             </a>
 
             <nav class="topnav" aria-label="Navigasi utama">
-                <a href="#about" data-nav="about"><span>01</span> Catatan</a>
-                <a href="#skills" data-nav="skills"><span>02</span> Peralatan</a>
-                <a href="#projects" data-nav="projects"><span>03</span> Project</a>
-                <a href="#achievements" data-nav="achievements"><span>04</span> Sertifikat</a>
-                <a href="#contact" data-nav="contact"><span>05</span> Kontak</a>
+                <a href="#about" data-nav="about">Catatan</a>
+                <a href="#skills" data-nav="skills">Peralatan</a>
+                <a href="#projects" data-nav="projects">Project</a>
+                <a href="#achievements" data-nav="achievements">Sertifikat</a>
+                <a href="#contact" data-nav="contact">Kontak</a>
             </nav>
 
-            <button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false">
-                <span>Indeks</span>
+            <button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false"
+                aria-label="Buka menu">
                 <span class="menu-btn-lines" aria-hidden="true"><i></i><i></i></span>
             </button>
+
+            <nav class="menu-dropdown" id="menu" aria-label="Navigasi seluler" hidden>
+                <a href="#about" data-nav="about">Catatan</a>
+                <a href="#skills" data-nav="skills">Peralatan</a>
+                <a href="#projects" data-nav="projects">Project</a>
+                <a href="#achievements" data-nav="achievements">Sertifikat</a>
+                <a href="#contact" data-nav="contact">Kontak</a>
+            </nav>
         </div>
         <div class="progress" aria-hidden="true"><span></span></div>
     </header>
-
-    <!-- Menu seluler -->
-    <dialog class="menu" id="menu" aria-label="Indeks navigasi">
-        <div class="menu-inner">
-            <div class="menu-top">
-                <span class="eyebrow">Indeks / 2026</span>
-                <button class="menu-close" type="button" data-menu-close>Tutup ×</button>
-            </div>
-            <nav class="menu-nav" aria-label="Navigasi seluler">
-                <a href="#about"><span>01</span> Catatan Lapangan</a>
-                <a href="#skills"><span>02</span> Peralatan</a>
-                <a href="#projects"><span>03</span> Project</a>
-                <a href="#achievements"><span>04</span> Sertifikat &amp; Penghargaan</a>
-                <a href="#contact"><span>05</span> Kirim Kabar</a>
-            </nav>
-            <div class="menu-foot">
-                <a href="mailto:afdhalfidi.ansori015@gmail.com">afdhalfidi.ansori015@gmail.com</a>
-                <span>Pekanbaru, Riau</span>
-            </div>
-        </div>
-    </dialog>
 
     <main id="main">
         <!-- Hero -->
@@ -83,16 +70,23 @@
             <div class="shell hero-grid">
                 <div class="hero-copy">
                     <p class="eyebrow hero-eyebrow">
-                        <span>Atlas karya / 2026</span>
+                        <span>Portofolio / 2026</span>
                         <span class="dot" aria-hidden="true"></span>
                         <span>Pekanbaru, Riau</span>
                     </p>
 
-                    <h1 class="hero-title" id="hero-title">
-                        <span class="line"><span style="--i: 0">Afdhal</span></span>
-                        <span class="line"><span style="--i: 1"><em>Fidi</em></span></span>
-                        <span class="line"><span style="--i: 2">Ansori</span></span>
-                    </h1>
+                    <div class="hero-title-row">
+                        <figure class="hero-avatar">
+                            <img src="assets/img/profile.jpg" alt="Afdhal Fidi Ansori" width="200" height="200"
+                                decoding="async" />
+                        </figure>
+
+                        <h1 class="hero-title" id="hero-title">
+                            <span class="line"><span style="--i: 0">Afdhal</span></span>
+                            <span class="line"><span style="--i: 1"><em>Fidi</em></span></span>
+                            <span class="line"><span style="--i: 2">Ansori</span></span>
+                        </h1>
+                    </div>
 
                     <p class="hero-lead">
                         Saya membangun media belajar interaktif — LKPD, game edukasi, dan aplikasi web — lalu
@@ -112,10 +106,6 @@
                         <div>
                             <dt>Waktu</dt>
                             <dd data-clock>— WIB</dd>
-                        </div>
-                        <div>
-                            <dt>Koordinat</dt>
-                            <dd>0°32′N 101°27′E</dd>
                         </div>
                     </dl>
                 </div>
@@ -148,10 +138,6 @@
         <!-- 01 About -->
         <section class="chapter" id="about" data-chapter="about" aria-labelledby="about-title">
             <div class="shell chapter-grid">
-                <aside class="chapter-aside" aria-label="Label catatan lapangan">
-                    <p class="eyebrow">01 / Catatan Lapangan</p>
-                </aside>
-
                 <div class="chapter-body">
                     <h2 class="section-title" id="about-title">Belajar dengan <em>membuat.</em></h2>
 
@@ -205,10 +191,6 @@
         <!-- 02 Skills -->
         <section class="chapter" id="skills" data-chapter="skills" aria-labelledby="skills-title">
             <div class="shell chapter-grid">
-                <aside class="chapter-aside" aria-label="Label peralatan">
-                    <p class="eyebrow">02 / Peralatan</p>
-                </aside>
-
                 <div class="chapter-body">
                     <h2 class="section-title" id="skills-title">Alat yang saya <em>pakai.</em></h2>
                     <p class="section-lead">
@@ -258,10 +240,6 @@
         <!-- 03 Projects -->
         <section class="chapter" id="projects" data-chapter="projects" aria-labelledby="projects-title">
             <div class="shell chapter-grid">
-                <aside class="chapter-aside" aria-label="Label bagian project">
-                    <p class="eyebrow">03 / Project</p>
-                </aside>
-
                 <div class="chapter-body">
                     <div class="chapter-heading">
                         <h2 class="section-title" id="projects-title">Tiga project <em>pilihan.</em></h2>
@@ -320,10 +298,6 @@
         <!-- 04 Achievements -->
         <section class="chapter" id="achievements" data-chapter="achievements" aria-labelledby="achievements-title">
             <div class="shell chapter-grid">
-                <aside class="chapter-aside" aria-label="Label sertifikat dan penghargaan">
-                    <p class="eyebrow">04 / Sertifikat &amp; Penghargaan</p>
-                </aside>
-
                 <div class="chapter-body">
                     <div class="chapter-heading">
                         <h2 class="section-title" id="achievements-title">Sertifikat &amp; <em>penghargaan.</em></h2>
@@ -395,7 +369,6 @@
             <div class="shell">
                 <div class="contact-panel" data-reveal>
                     <div class="contact-copy">
-                        <p class="eyebrow">05 / Kirim Kabar</p>
                         <h2 class="contact-title" id="contact-title">
                             Punya ide,<br /><em>atau sekadar menyapa?</em>
                         </h2>
@@ -404,13 +377,15 @@
                             email adalah jalur tercepat.
                         </p>
                         <div class="contact-actions">
-                            <a class="btn btn-solid"
-                                href="mailto:afdhalfidi.ansori015@gmail.com?subject=Halo%20Afdhal">Tulis email
-                                <span aria-hidden="true">↗</span></a>
-                            <button class="btn" type="button" data-copy="afdhalfidi.ansori015@gmail.com">
-                                <span class="copy-label">Salin alamat</span>
+                            <button class="btn btn-solid" type="button" data-copy="afdhalfidi.ansori015@gmail.com">
+                                <span class="copy-label" aria-live="polite">Salin alamat</span>
                             </button>
+                            <a class="btn"
+                                href="mailto:afdhalfidi.ansori015@gmail.com?subject=Halo%20Afdhal">Buka aplikasi email
+                                <span aria-hidden="true">↗</span></a>
                         </div>
+                        <p class="contact-note">Di desktop tanpa aplikasi email, gunakan <strong>Salin alamat</strong>
+                            lalu tempel di Gmail atau Outlook.</p>
                     </div>
 
                     <div class="contact-side">
@@ -431,12 +406,36 @@
                         </dl>
 
                         <nav class="social-list" aria-label="Tautan sosial">
-                            <a href="https://github.com/fidiakacoderlearner" target="_blank" rel="noopener">GitHub
-                                <span aria-hidden="true">↗</span></a>
-                            <a href="https://www.instagram.com/3.14di/" target="_blank" rel="noopener">Instagram
-                                <span aria-hidden="true">↗</span></a>
-                            <a href="https://www.linkedin.com/in/afdhal-fidi-ansori" target="_blank"
-                                rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+                            <a href="https://github.com/fidiakacoderlearner" target="_blank" rel="noopener">
+                                <span class="social-label">
+                                    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2z" />
+                                    </svg>
+                                    GitHub
+                                </span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="https://www.instagram.com/3.14di/" target="_blank" rel="noopener">
+                                <span class="social-label">
+                                    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path
+                                            d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zm0 1.8c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.19.21.55.47.94.88 1.35.41.41.8.67 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.19-.21-.55-.47-.94-.88-1.35-.41-.41-.8-.67-1.35-.88-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.76-.07zm0 3.06a4.98 4.98 0 1 1 0 9.96 4.98 4.98 0 0 1 0-9.96zm0 1.8a3.18 3.18 0 1 0 0 6.36 3.18 3.18 0 0 0 0-6.36zm5.2-2.25a1.16 1.16 0 1 1 0 2.32 1.16 1.16 0 0 1 0-2.32z" />
+                                    </svg>
+                                    Instagram
+                                </span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/afdhal-fidi-ansori" target="_blank" rel="noopener">
+                                <span class="social-label">
+                                    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path
+                                            d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.4 0h4.37v1.91h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.64c0-1.58-.03-3.62-2.21-3.62-2.21 0-2.55 1.73-2.55 3.51V22H7.62V8z" />
+                                    </svg>
+                                    LinkedIn
+                                </span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
                         </nav>
                     </div>
                 </div>
@@ -445,13 +444,9 @@
     </main>
 
     <footer class="footer">
-        <div class="shell footer-grid">
-            <p class="footer-mark" aria-hidden="true">AF</p>
-            <div class="footer-info">
-                <p>Disusun oleh Afdhal Fidi Ansori di Pekanbaru.</p>
-                <p>Fraunces · Work Sans · IBM Plex Mono</p>
-            </div>
-            <p class="footer-year">© <span data-year>2026</span></p>
+        <div class="shell footer-inner">
+            <span class="brand-mark footer-mark" aria-hidden="true">A</span>
+            <p class="footer-copy">© 2026 Afdhal Fidi Ansori. Dibuat dengan <em>ko(pi + de)</em>.</p>
         </div>
     </footer>
 
