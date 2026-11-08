@@ -14,7 +14,7 @@ di-hosting di GitHub Pages.
 |---|---|
 | `index.html` | Beranda: hero, Catatan Lapangan, Peralatan, Project (3 project unggulan), Sertifikat & Penghargaan (3 sertifikat dan penghargaan), Kontak |
 | `projects.html` | Indeks lengkap 5 project yang ditampilkan |
-| `certificates.html` | Sertifikat & Penghargaan — 4 sertifikat dan penghargaan dengan document viewer |
+| `certificates.html` | Sertifikat & Penghargaan — 5 sertifikat dan penghargaan dengan document viewer |
 | `project/cassava-village.html` | Detail Cassava Village + galeri 3 gambar |
 | `project/mathbiz-riau.html` | Detail Mathbiz Riau + galeri 3 gambar |
 | `project/cooking-number.html` | Detail Cooking Number + galeri 3 gambar |
@@ -45,7 +45,7 @@ Web-Portofolio/
 └── assets/
     ├── favicon.svg
     └── img/
-        ├── profile.jpg          # foto hero: plat 4:5 di desktop, avatar kecil di mobile
+        ├── profile.jpg          # foto latar penuh section hero
         ├── about.jpg            # tidak dipakai lagi; disimpan sebagai aset lama
         ├── project1.jpg         # Cassava Village
         ├── project2.jpg         # Mathbiz Riau
@@ -56,6 +56,7 @@ Web-Portofolio/
         ├── cert-lkti.jpg
         ├── cert-media.jpg
         ├── cert-esai.jpg
+        ├── cert-game.jpg        # DMGC 2026
         ├── placeholder.svg      # cadangan lama; saat ini tidak direferensikan
         ├── cassava/1–3.jpg
         ├── mathbiz/1–3.jpg
@@ -98,9 +99,8 @@ Font dimuat dari Google Fonts di setiap halaman. Ada fallback sistem jika font g
 - Tanpa gradient, tanpa glassmorphism, tanpa bayangan kartu yang tebal.
 - Sudut tajam, garis rambut, ruang kosong besar, dan komposisi asimetris.
 - Tekstur kertas halus dibuat dengan lapisan CSS, bukan gambar.
-- Di desktop, foto hero diperlakukan sebagai pelat katalog: bingkai 4:5, garis tipis, crop mark,
-  dan caption `Pl. 01`. Di mobile/tablet, pelat besar diganti avatar bulat kecil di sisi kanan,
-  dengan judul nama di sisi kiri, agar foto tidak jatuh di bawah status.
+- Foto hero dipakai sebagai latar penuh section hero: `cover` di tengah, blur halus, dan lapisan
+  warna kertas agar teks tetap terbaca. Tidak ada pelat foto atau avatar terpisah.
 - Bagian About sepenuhnya tipografis; tidak ada foto About.
 
 ### Gerak
@@ -234,7 +234,7 @@ Untuk menampilkan SmartQueue lagi:
 
 | Tempat | Rasio tampil | Ukuran disarankan |
 |---|---|---|
-| Foto hero | 4:5 (`cover`) | 1000 × 1250 px |
+| Foto hero (latar) | `cover` | 1000 × 1000 px atau lebih |
 | Thumbnail project / hero detail | 16:9 (`cover`) | 1600 × 900 px |
 | Galeri detail | 4:3 (`cover`) | 1200 × 900 px |
 | Thumbnail sertifikat | 16:10 (`cover`) | 1600 × 1131 px (A4; crop 16:10) |
@@ -249,10 +249,10 @@ utuh dengan `object-fit: contain`.
   shift.
 - CSS memakai `img { height: auto; }`; jangan menambahkan `height` tetap pada gambar yang memakai
   `aspect-ratio`.
-- Gambar hero dan gambar pertama yang terlihat di halaman indeks/sertifikat memakai
-  `fetchpriority="high"`; gambar lain memakai `loading="lazy"`.
-- `profile.jpg` saat ini berukuran 1000 × 1000 dan ditampilkan dalam bingkai 4:5. Jika ingin
-  hasil crop yang lebih tepat, gunakan foto potret 1000 × 1250.
+- Foto hero dimuat lewat `preload`; gambar pertama yang terlihat di halaman indeks/sertifikat
+  memakai `fetchpriority="high"`; gambar lain memakai `loading="lazy"`.
+- `profile.jpg` saat ini berukuran 1000 × 1000 dan dipakai sebagai latar hero dengan `cover`.
+  Gunakan foto yang lebih besar jika ingin hasil lebih tajam di layar beresolusi tinggi.
 - `about.jpg` tidak lagi dipakai. File dibiarkan agar tidak menghapus aset lama.
 - `placeholder.svg` juga tidak direferensikan lagi.
 
