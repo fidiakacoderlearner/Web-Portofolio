@@ -96,11 +96,13 @@ Font dimuat dari Google Fonts di setiap halaman. Ada fallback sistem jika font g
 
 ### Aturan Visual
 
-- Tanpa gradient, tanpa glassmorphism, tanpa bayangan kartu yang tebal.
+- Tanpa gradient, kecuali gradasi kertas di latar hero; tanpa glassmorphism, tanpa bayangan kartu
+  yang tebal.
 - Sudut tajam, garis rambut, ruang kosong besar, dan komposisi asimetris.
 - Tekstur kertas halus dibuat dengan lapisan CSS, bukan gambar.
-- Foto hero dipakai sebagai latar penuh section hero: `cover` di tengah, blur halus, dan lapisan
-  warna kertas agar teks tetap terbaca. Tidak ada pelat foto atau avatar terpisah.
+- Foto hero dipakai sebagai latar penuh section hero: `cover`, blur tipis, digeser sedikit ke kanan,
+  dan diturunkan dari navbar. Gradasi kertas menjaga teks tetap terbaca sekaligus membiarkan wajah
+  terlihat. Tidak ada pelat foto atau avatar terpisah.
 - Bagian About sepenuhnya tipografis; tidak ada foto About.
 
 ### Gerak
